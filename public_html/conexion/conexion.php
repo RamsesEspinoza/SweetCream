@@ -2,7 +2,7 @@
 
 $dbhost = "localhost";
 $dbuser = "root";
-$dbpass = "1234";
+$dbpass = "";
 $dbname = "sweet_cream_db";
 
 

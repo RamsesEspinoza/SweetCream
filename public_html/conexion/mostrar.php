@@ -1,5 +1,5 @@
 <?php
-    $inc = include("./conexion/login.php");
+    $inc = include("./conexion/conexion.php");
     if($inc){
         $consulta = "SELECT * FROM pastel_n";
         $resultado = mysqli_query($conn,$consulta);
@@ -9,11 +9,22 @@
                 $nombre = $row['nombre'];
                 $precio = $row['precio'];
                 ?>
-<div>
-    <b>id: </b><?php echo $id;?><br>
-    <b>Nombre: </b><?php echo $nombre;?><br>
-    <b>precio:: </b><?php echo $precio;?><br>
-</div>
+                 <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="product__item">
+                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-1.jpg">
+                            <div class="product__label">
+                                <span>Cupcake</span>
+                            </div>
+                        </div>
+                        <div class="product__item__text">
+                            <h6><a href="#"><?php echo $nombre;?></a></h6>
+                            <div class="product__item__price">$<?php echo $precio;?>.00</div>
+                            <div class="cart_add">
+                                <a href="#">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <?php
             }
         }

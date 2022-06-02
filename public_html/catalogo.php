@@ -121,7 +121,7 @@
                         <ul>
                             <li><a href="./index.html">Home</a></li>
                             <li><a href="./about.html">About</a></li>
-                            <li class="active"><a href="./catalogo.php">Shop</a></li>
+                            <li class="active"><a href="./shop.html">Shop</a></li>
                             <li><a href="#">Pages</a>
                                 <ul class="dropdown">
                                     <li><a href="./shop-details.html">Shop Details</a></li>
@@ -153,7 +153,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="breadcrumb__links">
-                        <a href="./registrarPasteles.php">Add</a>
+                        <a href="./index.html">Home</a>
                         <span>Shop</span>
                     </div>
                 </div>

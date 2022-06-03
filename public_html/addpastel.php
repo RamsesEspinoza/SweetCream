@@ -121,7 +121,7 @@
                         <ul>
                             <li><a href="./index.html">Home</a></li>
                             <li><a href="./about.html">About</a></li>
-                            <li class="active"><a href="./shop.html">Shop</a></li>
+                            <li class="active"><a href="./catalogo.php">Shop</a></li>
                             <li><a href="#">Pages</a>
                                 <ul class="dropdown">
                                     <li><a href="./shop-details.html">Shop Details</a></li>
@@ -148,73 +148,82 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="breadcrumb__text">
-                        <h2>Shop</h2>
+                        <h2>Agregar pasteles</h2>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="breadcrumb__links">
-                        <a href="./index.html">Home</a>
-                        <span>Shop</span>
+                        <a href="./catalogo.php">catalogo</a>
+                        <span>añadir</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Breadcrumb End -->
-
+    <!-- phpAgregarpastel Begin -->
+    <?php
+    $inc = include("./conexion/conexion.php");
+    if(isset($_POST["NombrePastel"])){
+        $query = 'INSERT INTO pastel_n (nombre,precio,descripcion,img_pastel,tipo)
+            VALUES(\''.$_POST["NombrePastel"].'\',\''.$_POST["PrecioPastel"].'\',
+                \''.$_POST["DescPastel"].'\',\''.$_POST["ImgPastel"].'\',1)';
+        $result = mysqli_query($conn,$query) or die(mysqli_error());
+        ?>
+            <div class="breadcrumb-option">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="breadcrumb__text">
+                        <h4><?php
+                            if($query){
+                                echo 'Pastel agregado correctamente';
+                            }else{echo 'error';}
+                        ?></h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <?php
+    }
+?>
+    <!-- phpAgregarpastel End -->
     <!-- Shop Section Begin -->
     <section class="shop spad">
         <div class="container">
             <div class="shop__option">
                 <div class="row">
-                    <div class="col-lg-7 col-md-7">
-                        <div class="shop__option__search">
-                            <form action="#">
-                                <select>
-                                    <option value="">Categories</option>
-                                    <option value="">Red Velvet</option>
-                                    <option value="">Cup Cake</option>
-                                    <option value="">Biscuit</option>
-                                </select>
-                                <input type="text" placeholder="Search">
-                                <button type="submit"><i class="fa fa-search"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-lg-5 col-md-5">
-                        <div class="shop__option__right">
-                            <select>
-                                <option value="">Default sorting</option>
-                                <option value="">A to Z</option>
-                                <option value="">1 - 8</option>
-                                <option value="">Name</option>
-                            </select>
-                            <a href="#"><i class="fa fa-list"></i></a>
-                            <a href="#"><i class="fa fa-reorder"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                
-                     <?php
-        include ("./conexion/mostrar.php");
-        ?>
-               
-            </div>
-            <div class="shop__last__option">
-                <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="shop__pagination">
-                            <a href="#">1</a>
-                            <a href="#">2</a>
-                            <a href="#">3</a>
-                            <a href="#"><span class="arrow_carrot-right"></span></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="shop__last__text">
-                            <p>Showing 1-9 of 10 results</p>
+                        <form action="addpastel.php" method="POST">
+				<div class="form-group">
+					<label for="idnombre">
+						Nombre
+					</label>
+                                    <input type="text" class="form-control" id="idnombre" name="NombrePastel" required>
+				</div>
+                                <div class="form-group">
+					<label for="idnombre">
+						Precio
+					</label>
+                                    <input type="number" class="form-control" id="idnombre" name="PrecioPastel" required>
+				</div>
+                                <div class="form-group">
+					<label for="idnombre">
+						Descripción
+					</label>
+                                    <input type="text" class="form-control" id="idnombre" name="DescPastel" required>
+				</div>
+                                <div class="form-group">
+					<label for="idnombre">
+						Imagen(representativo)
+					</label>
+                                    <input type="text" class="form-control" id="idnombre" name="ImgPastel" required>
+				</div>
+				<button type="submit" class="btn btn-primary">
+					Agregar
+				</button>
+			</form>
                         </div>
                     </div>
                 </div>

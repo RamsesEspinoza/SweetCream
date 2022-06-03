@@ -153,7 +153,7 @@
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="breadcrumb__links">
-                        <a href="./registrarPasteles.php">Add</a>
+                        <a href="./addpastel.php">Add</a>
                         <span>Shop</span>
                     </div>
                 </div>

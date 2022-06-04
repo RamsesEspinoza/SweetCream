@@ -32,6 +32,7 @@ body {
   height: 100%;
   font-family: "Montserrat", sans-serif;
   -webkit-font-smoothing: antialiased;
+  background-color: #FFFFFF;
 }
 
 h1,
@@ -162,6 +163,8 @@ ol {
   background: #f08632;
   letter-spacing: 2px;
 }
+
+
 
 .site-btn {
   font-size: 14px;

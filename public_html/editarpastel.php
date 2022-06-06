@@ -148,73 +148,71 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="breadcrumb__text">
-                        <h2>Shop</h2>
+                        <h2>Editar partel</h2>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="breadcrumb__links">
-                        <a href="./gestionpastel.php">Gestionar</a>
-                        <span>Shop</span>
+                        <a href="./catalogo.php">catalogo</a>
+                        <span>editar</span>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Breadcrumb End -->
-
+    <!-- phpAgregarpastel Begin -->
+    <?php
+    $inc = include("./conexion/conexion.php");
+    if($inc){
+        $id = $_GET["id"];
+        $query = "SELECT * FROM pastel_n WHERE pastel_id = '$id'";
+        $result = mysqli_query($conn,$query) or die(mysqli_error());
+        ?>
+    <!-- phpAgregarpastel End -->
     <!-- Shop Section Begin -->
     <section class="shop spad">
         <div class="container">
             <div class="shop__option">
                 <div class="row">
-                    <div class="col-lg-7 col-md-7">
-                        <div class="shop__option__search">
-                            <form action="#">
-                                <select>
-                                    <option value="">Categories</option>
-                                    <option value="">Red Velvet</option>
-                                    <option value="">Cup Cake</option>
-                                    <option value="">Biscuit</option>
-                                </select>
-                                <input type="text" placeholder="Search">
-                                <button type="submit"><i class="fa fa-search"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-lg-5 col-md-5">
-                        <div class="shop__option__right">
-                            <select>
-                                <option value="">Default sorting</option>
-                                <option value="">A to Z</option>
-                                <option value="">1 - 8</option>
-                                <option value="">Name</option>
-                            </select>
-                            <a href="#"><i class="fa fa-list"></i></a>
-                            <a href="#"><i class="fa fa-reorder"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                
-                     <?php
-        include ("./conexion/mostrar.php");
-        ?>
-               
-            </div>
-            <div class="shop__last__option">
-                <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="shop__pagination">
-                            <a href="#">1</a>
-                            <a href="#">2</a>
-                            <a href="#">3</a>
-                            <a href="#"><span class="arrow_carrot-right"></span></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="shop__last__text">
-                            <p>Showing 1-9 of 10 results</p>
+                        <form action="./procesarPastel.php" method="POST">
+                            <?php while ($row=mysqli_fetch_assoc($result)){?>
+				<div class="form-group">
+					
+                                    <input type="text" class="form-control" id="idnombre" name="id" value="<?php echo $row["pastel_id"];?>" hidden="">
+				</div>
+                                <div class="form-group">
+					<label for="idnombre">
+						Nombre
+					</label>
+                                    <input type="text" class="form-control" id="idnombre" name="NombrePastel" value="<?php echo $row["nombre"];?>" required>
+				</div>
+                                <div class="form-group">
+					<label for="idnombre">
+						Precio
+					</label>
+                                    <input type="number" class="form-control" id="idnombre" name="PrecioPastel" value="<?php echo $row["precio"];?>" required>
+				</div>
+                                <div class="form-group">
+					<label for="idnombre">
+						Descripción
+					</label>
+                                    <input type="text" class="form-control" id="idnombre" name="DescPastel" value="<?php echo $row["descripcion"];?>" required>
+				</div>
+                                <div class="form-group">
+					<label for="idnombre">
+						Imagen(representativo)
+					</label>
+                                    <input type="text" class="form-control" id="idnombre" name="ImgPastel" value="<?php echo $row["img_pastel"];?>" required>
+				</div>
+                            <?php }
+    
+                            } ?>
+				<button type="submit" class="btn btn-primary">
+					Agregar
+				</button>
+			</form>
                         </div>
                     </div>
                 </div>

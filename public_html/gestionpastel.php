@@ -148,12 +148,12 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="breadcrumb__text">
-                        <h2>Shop</h2>
+                        <h2>Gestion </h2>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="breadcrumb__links">
-                        <a href="./gestionpastel.php">Gestionar</a>
+                        <a href="./addpastel.php">Add</a>
                         <span>Shop</span>
                     </div>
                 </div>
@@ -198,7 +198,7 @@
             <div class="row">
                 
                      <?php
-        include ("./conexion/mostrar.php");
+        include ("./conexion/mostrarGestion.php");
         ?>
                
             </div>
@@ -309,6 +309,7 @@
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/jquery.nicescroll.min.js"></script>
 <script src="js/main.js"></script>
+<script src="js/confirmacion.js"></script>
 </body>
 
 </html>

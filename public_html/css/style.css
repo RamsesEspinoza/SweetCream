@@ -163,7 +163,31 @@ ol {
   background: #f08632;
   letter-spacing: 2px;
 }
-
+.crearpastel{
+    position: relative;
+    width: 100%;
+    height: 130%;
+    
+}
+.botonestiloenviar{
+    padding-top: 3%;
+}
+.capa1{
+    position: absolute;
+    padding-left: 20%;
+    z-index: 2;
+}
+.capa2{
+    position: absolute;
+    padding-left: 20%;
+    padding-top: 14.5%;
+    z-index: 1;
+}
+.capa3{
+    position: absolute;
+    padding-left: 20%;
+    padding-top: 31%
+}
 
 
 .site-btn {

@@ -107,6 +107,29 @@ ol {
 /*---------------------
   Helper CSS
 -----------------------*/
+
+
+
+
+
+
+
+
+
+
+/************************
+Creaciones propias
+*************************/
+
+
+/*Flecha arriba*/
+
+.icon-arrow-up2:before {
+  content: "\ea3a";
+}
+
+
+/*----------------------*/
 .section-title {
   margin-bottom: 35px;
 }

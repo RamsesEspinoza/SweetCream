@@ -1,0 +1,102 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/css.css to edit this template
+*/
+/* 
+    Created on : 23 jun. 2022, 19:31:11
+    Author     : Irv Gar
+*/
+
+/*Resoluciones*/
+
+/**Movil**/
+
+@media (max-width: 450px) {
+    .desktop {
+        display: none;
+    }
+    .tablet {
+        display: none;
+    }
+    .movil2 {
+        display: none;
+    }
+}
+
+/*movil2*/
+
+@media (min-width: 451px) and (max-width: 768px) {
+    .desktop {
+        display: none;
+    }
+    .movil {
+        display: none;
+    }
+    .tablet {
+        display: none;
+    }
+}
+
+
+/*pc*/
+
+@media (min-width: 768px) {
+    .tablet {
+        display: none;
+    }
+    .movil {
+        display: none;
+    }
+    .movil2 {
+        display: none;
+    }
+}
+
+
+
+
+
+
+.pasteles{}
+
+    @media (max-width: 450px) 
+    {
+        .pasteles{ height: 200px}
+   
+    }
+
+    
+/*movil2*/
+@media (min-width: 451px) and (max-width: 768px) 
+    {
+        .pasteles{ height: 380px}
+    }
+
+
+/*pc*/
+
+@media (min-width: 768px) 
+    {
+        .pasteles{ height: 600px}
+    }
+
+
+
+
+
+
+/*
+/**Tablet
+
+@media (min-width: 768px) and (max-width: 990px) {
+    .desktop {
+        display: none;
+    }
+    .movil {
+        display: none;
+    }
+}
+
+
+/**Escritorio**/
+

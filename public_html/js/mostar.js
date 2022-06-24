@@ -5,7 +5,7 @@
 if (document.getElementById("btnfresas"))
 {
     switchFresa = document.getElementById("btnfresas");
-    const img = document.getElementById("fresas")
+    let img = document.querySelectorAll("#fresas")
     switchFresa.onclick = () => {
 
         switchFresa.classList.toggle('active')
@@ -31,7 +31,7 @@ if (document.getElementById("btnfresas"))
 if (document.getElementById("btnUvas"))
 {
     switchUva = document.getElementById("btnUvas");
-    const img = document.getElementById("uvas")
+    const img = document.querySelectorAll("uvas")
     switchUva.onclick = () => {
 
         switchUva.classList.toggle('active')
@@ -59,7 +59,7 @@ if (document.getElementById("btnUvas"))
 if (document.getElementById("btnFram"))
 {
     switchFram = document.getElementById("btnFram");
-    const img = document.getElementById("fram") //id imagen
+    const img = document.querySelectorAll("fram") //id imagen
     switchFram.onclick = () => {
 
         switchFram.classList.toggle('active')

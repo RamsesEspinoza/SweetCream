@@ -26,7 +26,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap"
               rel="stylesheet">
 
-        <script src="//code.tidio.co/g1tvhizsol7n37h46ewx14mqs1fy14tl.js" async></script>
+       
         <!-- Css Styles -->
         <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
         <link rel="stylesheet" href="css/flaticon.css" type="text/css">
@@ -429,6 +429,7 @@
         <script src="http://code.jquery.com/jquery-latest.js"></script>
         <script src="https://kit.fontawesome.com/bdc40e9dda.js" crossorigin="anonymous"></script>
         <script src="//code.tidio.co/g1tvhizsol7n37h46ewx14mqs1fy14tl.js" async></script>
+
     </body>
 
 </html>

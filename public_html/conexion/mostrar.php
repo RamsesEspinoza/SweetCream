@@ -11,7 +11,7 @@
                 ?>
                     <div class="col-lg-3 col-md-6 col-sm-6">
                         <div class="product__item">
-                            <div class="product__item__pic set-bg" data-setbg="img/shop/product-1.jpg">
+                            <div class="product__item__pic set-bg" data-setbg="<?php $row['img_pastel'];?>">
                                 <div class="product__label">
                                     <span>Cupcake</span>
                                 </div>
@@ -19,10 +19,15 @@
                             <div class="product__item__text">
                                 <h6><a href="#"><?php echo $nombre;?></a></h6>
                                 <div class="product__item__price">$<?php echo $precio;?>.00</div>
+                                <form action="./functions.php" method="POST">
+                                    <input type="text" class="form-control" id="idnombre" name="txtnombre" value="<?php echo $row["nombre"];?>" hidden="">
+                                    <input type="text" class="form-control" id="idnombre" name="txtprecio" value="<?php echo $row["precio"];?>" hidden="">
                                     <div class="cart_add">
-                                        <a type="submit" data-toggle="modal" data-target="#exampleModal" 
-                                           href="../functions.php?id=<?php echo $id;?>">Add to cart</a>    
+                                        <button type="submit" data-toggle="modal" data-target="#exampleModal">
+                                            Añadir al carrito
+                                        </button>    
                                     </div>
+                                </form>
                             </div>
                         </div>
                     </div>

@@ -164,12 +164,41 @@
     <!-- phpAgregarpastel Begin -->
     <?php
     $inc = include("./conexion/conexion.php");
-    if(isset($_POST["NombrePastel"])){
+    $imagen ='';
+    if(isset($_FILES["ImgPastel"])){
+         echo "<script>
+         alert('Si entro en el if de la imagen');
+         </script>";
+        $file = $_FILES["ImgPastel"];
+        $nombreImg = $file["name"];
+        $tipo = $file["type"];
+        $ruta_prov = $file["tmp_name"];
+        $size = $file["size"];
+        $dimensiones = getimagesize($ruta_prov);
+        $width = $dimensiones[0];
+        $height = $dimensiones[1];
+        $carpeta = "img/";
+        if($tipo != 'image/jpg' && $tipo != 'image/JPG' && $tipo != 'image/jpeg' 
+                && $tipo != 'image/JPEG' && $tipo != 'image/png' && $tipo != 'image/gif'){
+            echo "<script>
+         alert('Error: El archivo no es unimagen o no es un formato permitido');
+         </script>";
+        }elseif ($size > 3*1024*1024) {
+            echo "<script>
+         alert('Tamaño de imágen exedido: Máx 3mb);
+         </script>";
+        } else {
+            $src = $carpeta.$nombreImg;
+            move_uploaded_fle($ruta_prov, $src);
+            $imagen = "img/".$nombreImg;
+        }
+    }
+    if (isset($_POST["NombrePastel"])) {
         $query = 'INSERT INTO pastel_n (nombre,precio,descripcion,img_pastel,tipo)
-            VALUES(\''.$_POST["NombrePastel"].'\',\''.$_POST["PrecioPastel"].'\',
-                \''.$_POST["DescPastel"].'\',\''.$_POST["ImgPastel"].'\',1)';
-        $result = mysqli_query($conn,$query) or die(mysqli_error());
-        ?>
+            VALUES(\'' . $_POST["NombrePastel"] . '\',\'' . $_POST["PrecioPastel"] . '\',
+                \'' . $_POST["DescPastel"] . '\',\'' . $imagen. '\',1)';
+        $result = mysqli_query($conn, $query) or die(mysqli_error());
+?>
             <div class="breadcrumb-option">
         <div class="container">
             <div class="row">
@@ -216,9 +245,9 @@
 				</div>
                                 <div class="form-group">
 					<label for="idnombre">
-						Imagen(representativo)
-					</label>
-                                    <input type="text" class="form-control" id="idnombre" name="ImgPastel" required>
+						Imagen
+                                        </label><br>
+                                        <input type="file" name="ImgPastel" required>
 				</div>
 				<button type="submit" class="btn btn-primary">
 					Agregar

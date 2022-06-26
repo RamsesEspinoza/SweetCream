@@ -11,7 +11,7 @@
                 ?>
                  <div class="col-lg-3 col-md-6 col-sm-6">
                     <div class="product__item">
-                        <div class="product__item__pic set-bg" data-setbg="img/shop/product-1.jpg">
+                        <div class="product__item__pic set-bg" data-setbg="<?php $row['img_pastel'];?>">
                             <div class="product__label">
                                 <a href="./editarpastel.php?id=<?php echo $row['pastel_id']?>"><span>Editar</span></a>
                             </div>

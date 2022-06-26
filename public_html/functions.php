@@ -1,46 +1,39 @@
 <?php
+session_start();
 $inc = include("./conexion/conexion.php");
-if($inc){
-    $consulta = "SELECT * FROM pastel_n";
-        $resultado = mysqli_query($conn,$consulta);
-        if($resultado){
-            while ($row = $resultado->fetch_array()){
-                $id = $row['pastel_id'];
-                $nombre = $row['nombre'];
-                $precio = $row['precio'];
-            }
+    if (isset($_SESSION["email"])) {
+        $correoV = $_SESSION["email"];
+    $consulta = 'SELECT * FROM carrito WHERE Nombre= \'' . $_POST["txtnombre"] . '\' AND email_usu = \'' . $correoV . '\'';
+        $resultado = mysqli_query($conn, $consulta);
+        if ($resultado) {
+            $bool = true;
+            while ($row = $resultado->fetch_array()) {
+                $nombre = $row['Nombre'];
+                $cant = $row['cantidad'];
+                $cantidad = intval($cant);
+                $bool = false;
+                if($nombre){
+                    $query = 'UPDATE carrito SET cantidad = \'' . ++$cantidad . '\' WHERE Nombre = \'' . $_POST["txtnombre"] . '\'';
+                    $result = mysqli_query($conn, $query) or die(mysqli_error());
+                    echo "<script>
+                    alert('Actualiza');
+                    window.location.href = './catalogo.php';
+                    </script>";
+                }
+            } 
+            if ($bool){
+                $query = 'INSERT INTO carrito (Nombre,precio,email_usu, cantidad)
+                VALUES(\'' . $_POST["txtnombre"] . '\',\'' . $_POST["txtprecio"] . '\',
+                    \'' . $correoV . '\',1)';
+                $result = mysqli_query($conn, $query) or die(mysqli_error());
+                echo "<script> 	    alert('Agregado al arrito');
+                        window.location.href = './catalogo.php';
+                     </script>";
         }
     }
-function add_to_cart($id, $cantidad = 1){
-    $nuevo_producto = [
-        'pastel_id' => NULL,
-        'nombre' => NULL,
-        'precio' => NULL,
-        'cantidad' => NULL,
-    ];
-    $producto = productoID($id);
-    if (!$producto){
-        return false;
+    } else {
+        echo "<script>
+                    alert('Debes inicar sesion para ver este apartado');
+                    </script>";
     }
-    $nuevo_producto = [
-        'pastel_id' => $producto['pastel_id'],
-        'nombre' => $producto['nombre'],
-        'precio' => $producto['precio'],
-        'cantidad' => $cantidad,
-    ];
-}
 
-function productoID($idproducto){
-    if($inc){
-        $consulta = "SELECT nombre, precio FROM pastel_n where pastel_id = $idproducto";   
-    }   
-}
-
-function obtenerCarrito(){
-    if (isset($_SESSION['cart'])){
-        return $_SESSION['cart'];
-    }
-    $cart = ['productos' => []];
-    $_SESSION ['cart'] = $cart;
-    return $_SESSION ['cart'];
-}

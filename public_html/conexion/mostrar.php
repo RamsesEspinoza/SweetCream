@@ -24,8 +24,8 @@
                                     <input type="text" class="form-control" id="idnombre" name="txtprecio" value="<?php echo $row["precio"];?>" hidden="">
                                     <div class="cart_add">
                                         <button type="submit" data-toggle="modal" data-target="#exampleModal">
-                                            Añadir al carrito
-                                        </button>    
+                                                Añadir al carrito
+                                            </button>
                                     </div>
                                 </form>
                             </div>

@@ -63,7 +63,7 @@
                     </div>
                 </div>
                 <button class="btn btn-block text-center my-3" type="submit" value="Registrarme">Registrarme</button>
-                <div class="text-center pt-3 text-muted"><span>o<a href="login.php">Inicia Sesion</a></span></div>
+                <div class="text-center pt-3 text-muted"><span>o <br><a href="login.php">Inicia Sesion</a></span></div>
                 
                 
             </form>

@@ -51,23 +51,6 @@
             <a href="./index.php"><img src="img/logo.png" alt=""></a>
         </div>
         <div id="mobile-menu-wrap"></div>
-        <div class="offcanvas__option">
-            <ul>
-                <li>USD <span class="arrow_carrot-down"></span>
-                    <ul>
-                        <li>EUR</li>
-                        <li>USD</li>
-                    </ul>
-                </li>
-                <li>ENG <span class="arrow_carrot-down"></span>
-                    <ul>
-                        <li>Spanish</li>
-                        <li>ENG</li>
-                    </ul>
-                </li>
-                <li><a href="#">Sign in</a> <span class="arrow_carrot-down"></span></li>
-            </ul>
-        </div>
     </div>
     <!-- Offcanvas Menu End -->
 
@@ -80,9 +63,15 @@
                                 <div class="header__top__inner">
                                     <div class="header__top__left">
 
-                                        <ul>
-                                            <li><a href="login.php"><?php include './nombre-usuario.php'; ?></a> <span class="arrow_carrot-down"></span></li>
-                                        </ul>
+                                        <div class="header__top__left">
+                                            <ul>
+                                                <li><a href="login.php">Bienvenido <?php include './nombre-usuario.php'; ?></a> <span class="arrow_carrot-down"></span>
+                                                    <ul>
+                                                        <div><a href="logout.php"><li>Cerrar Sesion</li></a></div>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
 
 
                                     </div>
@@ -98,13 +87,6 @@
                                             <a href="#" data-toggle="modal" data-target="#exampleModal"><img src="img/icon/cart.png" alt="" > <span>0</span></a>
                                             <div class="cart__price">Carrito: <span>$0.00</span></div>
                                         </div>
-
-                                        <div class="header__top__right__cart">
-
-                                            <a href="logout.php">Cerrar Sesion</a>
-                                        </div>
-
-
                                     </div>
                                 </div>
                             </div>
@@ -117,11 +99,11 @@
                         <div class="col-lg-12">
                             <nav class="header__menu mobile-menu">
                                 <ul>
-                                    <li class="active"><a href="./index.php">Inicio</a></li>
+                                    <li><a href="./index.php">Inicio</a></li>
                                     <li><a href="./about.html">Acerca de</a></li>
-                                    <li><a href="./catalogo.php">Tienda</a></li>
+                                    <li class="active"><a href="./catalogo.php">Tienda</a></li>
                                     <li><a href="./blog.html">¡Crea tu propio pastel!</a></li>
-                                    <li><a href="./contact.html">Contactanos</a></li>
+                                    <li><a href="./contact.php">Contactanos</a></li>
                                 </ul>
                             </nav>
                         </div>

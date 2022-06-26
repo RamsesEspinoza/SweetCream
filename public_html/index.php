@@ -83,12 +83,15 @@
                             <div class="col-lg-12">
                                 <div class="header__top__inner">
                                     <div class="header__top__left">
-
-                                        <ul>
-                                            <li><a href="login.php"><?php include './nombre-usuario.php'; ?></a> <span class="arrow_carrot-down"></span></li>
-                                        </ul>
-
-
+                                        <div class="header__top__left">
+                                            <ul>
+                                                <li><a href="login.php">Bienvenido <?php include './nombre-usuario.php'; ?></a> <span class="arrow_carrot-down"></span>
+                                                    <ul>
+                                                        <div><a href="logout.php"><li>Cerrar Sesion</li></a></div>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
                                     <div class="header__logo">
                                         <a href="./index.php"><img src="img/logo.png" alt=""></a>
@@ -102,13 +105,6 @@
                                             <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
                                             <div class="cart__price">Carrito: <span>$0.00</span></div>
                                         </div>
-
-                                        <div class="header__top__right__cart">
-
-                                            <a href="logout.php">Cerrar Sesion</a>
-                                        </div>
-
-
                                     </div>
                                 </div>
                             </div>
@@ -125,7 +121,7 @@
                                     <li><a href="./about.html">Acerca de</a></li>
                                     <li><a href="./catalogo.php">Tienda</a></li>
                                     <li><a href="./blog.html">¡Crea tu propio pastel!</a></li>
-                                    <li><a href="./contact.html">Contactanos</a></li>
+                                    <li><a href="./contact.php">Contactanos</a></li>
                                 </ul>
                             </nav>
                         </div>

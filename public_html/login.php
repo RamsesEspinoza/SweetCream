@@ -69,12 +69,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <meta charset='utf-8'>
         <meta name='viewport' content='width=device-width, initial-scale=1'>
         <title>LOGIN</title>
-        <link rel="stylesheet" href="css/EstiloLogin.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
         <link href='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css' rel='stylesheet'>
         <link href='https://use.fontawesome.com/releases/v5.7.2/css/all.css' rel='stylesheet'>
         <script type='text/javascript' src=''></script>
         <script type='text/javascript' src='https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js'></script>
         <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
+        <link rel="stylesheet" href="css/EstiloLogin.css"/>
     </head>
     <body oncontextmenu='return false' class='snippet-body'>
         <div class="wrapper bg-white">
@@ -103,7 +104,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <div class="text-center pt-3 text-muted"><a href="#" id="forgot">Olvidaste tu contraseña?</a></div>
                 <button class="btn btn-block text-center my-3" type="submit" value="Ingresar">Iniciar Sesion</button>
                 <div class="text-center pt-3 text-muted">No tienes Cuenta? <a href="signup.php">Registrate</a></div>
-                <div class="text-center pt-3 text-muted"><a href="index.php">Revisar sin Iniciar Sesion</a></div>
+                <div class="text-center pt-3 text-muted"><span><a href="index.php">Revisar sin Iniciar Sesion</a></span></div>
             </form>
         </div>
         <script type='text/javascript'></script>

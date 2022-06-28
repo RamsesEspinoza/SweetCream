@@ -7,7 +7,7 @@
     <meta name="keywords" content="Cake, unica, creative, html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Contactanos</title>
+    <title>Cake | Template</title>
 
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
@@ -116,69 +116,69 @@
                     <div class="row d-flex justify-content-center">
                         <div class="col-lg-4 col-md-7">
                             <div class="map__inner">
-                                <h6>Zumpango De Ocampo, Edo de México</h6>
+                                <h6>COlorado</h6>
                                 <ul>
-                                    <li>Paseos del lago, Logo Buenos Aires</li>
-                                    <li>sweetcream@gmail.com</li>
-                                    <li>+52 55 8016 4789</li> 
+                                    <li>1000 Lakepoint Dr, Frisco, CO 80443, USA</li>
+                                    <li>Sweetcake@support.com</li>
+                                    <li>+1 800-786-1000</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="map__iframe">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d885.8537985223709!2d-99.05543898112668!3d19.792611703822818!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d18dca93a63d7d%3A0xf1e5fb9e3fe0f2e2!2sPapeleria%20Y%20Cyber%20Akedaicar!5e0!3m2!1ses-419!2smx!4v1654050546146!5m2!1ses-419!2smx" height="300" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d10784.188505644011!2d19.053119335158936!3d47.48899529453826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1543907528304" height="300" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
             </div>
             <div class="contact__address">
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="contact__address__item">
-                            <h6>Lunes - Viernes</h6>
+                            <h6>san bernardino</h6>
                             <ul>
                                 <li>
                                     <span class="icon_pin_alt"></span>
-                                    <p>Lago Cardiel 1, Fracc. Paseos del Lago, 55600 México, Méx.</p>
+                                    <p>795 W 5th St, San Bernardino, CA 92410, USA</p>
                                 </li>
                                 <li><span class="icon_headphones"></span>
-                                    <p>+52 55 8016 4789</p>
+                                    <p>+1 800-786-1000</p>
                                 </li>
                                 <li><span class="icon_mail_alt"></span>
-                                    <p>sweetcreamsupportLV@gmail.com</p>
+                                    <p>Sweetcake@support.com</p>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="contact__address__item">
-                            <h6>Sabado</h6>
+                            <h6>Los angeles</h6>
                             <ul>
                                 <li>
                                     <span class="icon_pin_alt"></span>
-                                    <p>Lago Cardiel 1, Fracc. Paseos del Lago, 55600 México, Méx.</p>
+                                    <p>639 S Spring St, Los Angeles, CA 90014, USA</p>
                                 </li>
                                 <li><span class="icon_headphones"></span>
-                                    <p>+52 55343458485</p>
+                                    <p>+1 213-612-3000</p>
                                 </li>
                                 <li><span class="icon_mail_alt"></span>
-                                    <p>sweetcreamsupportS@gmail.com</p>
+                                    <p>Sweetcake@support.com</p>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="contact__address__item">
-                            <h6>Domingo</h6>
+                            <h6>san bernardino</h6>
                             <ul>
                                 <li>
                                     <span class="icon_pin_alt"></span>
-                                    <p>Lago Cardiel 1, Fracc. Paseos del Lago, 55600 México, Méx.</p>
+                                    <p>1000 Lakepoint Dr, Frisco, CO 80443, USA</p>
                                 </li>
                                 <li><span class="icon_headphones"></span>
-                                    <p>+52 5525040698</p>
+                                    <p>+1 800-786-1000</p>
                                 </li>
                                 <li><span class="icon_mail_alt"></span>
-                                    <p>sweetcreamsupportD@gmail.com</p>
+                                    <p>Sweetcake@support.com</p>
                                 </li>
                             </ul>
                         </div>
@@ -188,12 +188,11 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="contact__text">
-                        <h3>¡Contactanos!</h3>
+                        <h3>Contact With us</h3>
                         <ul>
-                            <li>El horario de Atencion es:</li>
-                            <li>Lunes - Viernes: 08:00 am – 08:30 pm</li>
-                            <li>Sabado: 10:00 am – 16:30 pm</li>
-                            <li>Domingo: 10:00 am – 16:30 pm</li>
+                            <li>Representatives or Advisors are available:</li>
+                            <li>Mon-Fri: 5:00am to 9:00pm</li>
+                            <li>Sat-Sun: 6:00am to 9:00pm</li>
                         </ul>
                         <img src="img/cake-piece.png" alt="">
                     </div>
@@ -203,14 +202,14 @@
                         <form action="#">
                             <div class="row">
                                 <div class="col-lg-6">
-                                    <input type="text" placeholder="Nombre">
+                                    <input type="text" placeholder="Name">
                                 </div>
                                 <div class="col-lg-6">
-                                    <input type="text" placeholder="Correo Electronico">
+                                    <input type="text" placeholder="Email">
                                 </div>
                                 <div class="col-lg-12">
-                                    <textarea placeholder="Mensaje"></textarea>
-                                    <button type="submit" class="site-btn">Enviar</button>
+                                    <textarea placeholder="Message"></textarea>
+                                    <button type="submit" class="site-btn">Send Us</button>
                                 </div>
                             </div>
                         </form>
@@ -227,12 +226,12 @@
             <div class="row">
                 <div class="col-lg-4">
                     <div class="footer__widget">
-                            <h6>Horario</h6>
-                            <ul>
-                                <li>Lunes - Viernes: 08:00 am – 08:30 pm</li>
-                                <li>Sabado: 10:00 am – 16:30 pm</li>
-                                <li>Domingo: 10:00 am – 16:30 pm</li>
-                            </ul>
+                        <h6>WORKING HOURS</h6>
+                        <ul>
+                            <li>Monday - Friday: 08:00 am – 08:30 pm</li>
+                            <li>Saturday: 10:00 am – 16:30 pm</li>
+                            <li>Sunday: 10:00 am – 16:30 pm</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="col-lg-4">
@@ -240,9 +239,10 @@
                         <div class="footer__logo">
                             <a href="#"><img src="img/footer-logo.png" alt=""></a>
                         </div>
-                        
+                        <p>Lorem ipsum dolor amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore dolore magna aliqua.</p>
                         <div class="footer__social">
-                            <a href="https://www.facebook.com/Sweet-Cream-109388668488078"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
                             <a href="#"><i class="fa fa-instagram"></i></a>
                             <a href="#"><i class="fa fa-youtube-play"></i></a>
@@ -251,12 +251,12 @@
                 </div>
                 <div class="col-lg-4">
                     <div class="footer__newslatter">
-                            <h6>Entérate de nuestras Promociones</h6>
-                            <p>Recibe promociones exclusivas y noticias sobre lanzamientos de nuevos productos</p>
-                            <form action="#">
-                                <input type="text" placeholder="Correo Electronico">
-                                <button type="submit"><i class="fa fa-send-o"></i></button>
-                            </form>
+                        <h6>Subscribe</h6>
+                        <p>Get latest updates and offers.</p>
+                        <form action="#">
+                            <input type="text" placeholder="Email">
+                            <button type="submit"><i class="fa fa-send-o"></i></button>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -266,14 +266,16 @@
                 <div class="row">
                     <div class="col-lg-7">
                         <p class="copyright__text text-white"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                          Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | <a target="">Universidad Tecnológica de Tecámac</a>
+                          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
                           <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                       </p>
                   </div>
                   <div class="col-lg-5">
                     <div class="copyright__widget">
                         <ul>
-                            
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Site Map</a></li>
                         </ul>
                     </div>
                 </div>

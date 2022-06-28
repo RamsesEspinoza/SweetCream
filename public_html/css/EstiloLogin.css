@@ -8,8 +8,10 @@
 
 body {
     background-image: url(../img/8-cajeta-con-nuez.jpg);
- 
-    height: 100vh;
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+    width: auto;
+    height: auto;
     font-family: 'Poppins', sans-serif;
   
 }

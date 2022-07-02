@@ -65,11 +65,12 @@
 
                                         <div class="header__top__left">
                                             <ul>
-                                                <li><a href="login.php">Bienvenido <?php include './nombre-usuario.php'; ?></a> <span class="arrow_carrot-down"></span>
+                                                <li><a href="login.php"><?php include './nombre-usuario.php'; ?></a> <span class="arrow_carrot-down"></span>
                                                     <ul>
-                                                        <div><a href="logout.php"><li>Cerrar Sesion</li></a></div>
+                                                        <div><a href="logout.php"><li>Salir</li></a></div>
                                                     </ul>
                                                 </li>
+                                                <li><a href="./catalogoEng.php">English</a></li>
                                             </ul>
                                         </div>
 
@@ -100,9 +101,9 @@
                             <nav class="header__menu mobile-menu">
                                 <ul>
                                     <li><a href="./index.php">Inicio</a></li>
-                                    <li><a href="./about.html">Acerca de</a></li>
+                                    <li><a href="./about.php">Acerca de</a></li>
                                     <li class="active"><a href="./catalogo.php">Tienda</a></li>
-                                    <li><a href="./blog.html">¡Crea tu propio pastel!</a></li>
+                                    <li><a href="./blog.php">¡Crea tu propio pastel!</a></li>
                                     <li><a href="./contact.php">Contactanos</a></li>
                                 </ul>
                             </nav>
@@ -118,13 +119,13 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="breadcrumb__text">
-                        <h2>Shop</h2>
+                        <h2>Tienda</h2>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="breadcrumb__links">
                         <a href="./gestionpastel.php">Gestionar</a>
-                        <span>Shop</span>
+                        <span>Tienda</span>
                     </div>
                 </div>
             </div>

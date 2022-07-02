@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -7,7 +8,7 @@
         <meta name="keywords" content="Cake, unica, creative, html">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Crear pastel</title>
+        <title>Maker</title>
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
@@ -79,11 +80,12 @@
                                 <div class="header__top__left">
                                     <div class="header__top__left">
                                         <ul>
-                                            <li><a href="login.php">Bienvenido <?php include './nombre-usuario.php'; ?></a> <span class="arrow_carrot-down"></span>
+                                            <li><a href="login.php"><?php include './nombre-usuarioEng.php'; ?></a> <span class="arrow_carrot-down"></span>
                                                 <ul>
-                                                    <div><a href="logout.php"><li>Cerrar Sesion</li></a></div>
+                                                    <div><a href="logout.php"><li>Log out</li></a></div>
                                                 </ul>
                                             </li>
+                                            <li><a href="./blog.php">Español</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -93,10 +95,10 @@
                                 <div class="header__top__right">
                                     <div class="header__top__right__links">
                                         <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
-                                        <a href="#"><img src="img/icon/heart.png" alt=""></a>
+                                        <a href="#" ><img src="img/icon/heart.png" alt=""></a>
                                     </div>
                                     <div class="header__top__right__cart">
-                                        <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
+                                        <a href="#" data-toggle="modal" data-target="#exampleModal"><img src="img/icon/cart.png" alt="" > <span>0</span></a>
                                         <div class="cart__price">Carrito: <span>$0.00</span></div>
                                     </div>
                                 </div>
@@ -112,11 +114,11 @@
                     <div class="col-lg-12">
                         <nav class="header__menu mobile-menu">
                             <ul>
-                                <li><a href="./index.php">Inicio</a></li>
-                                <li><a href="./about.html">Acerca de</a></li>
-                                <li><a href="./catalogo.php">Tienda</a></li>
-                                <li class="active"><a href="./blog.html">¡Crea tu propio pastel!</a></li>
-                                <li><a href="./contact.php">Contactanos</a></li>
+                                <li><a href="./indexEng.php">Home</a></li>
+                                <li><a href="./aboutEng.php">About</a></li>
+                                <li><a href="./catalogoEng.php">Store</a></li>
+                                <li class="active"><a href="./blogEng.php">Create your own cake!</a></li>
+                                <li><a href="./contactEng.php">Contact</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -132,7 +134,7 @@
                     <div class="row" >
 
                         <h3 class="text-center" style="padding-top: 25px; padding-bottom: 30px" >
-                            Presiona sobre la base o capa para cambiarlos
+                            Press on the base or layer to change them
                         </h3>
 
 
@@ -247,7 +249,7 @@
                                                 </div>
                                             </div>
                                             <div class="col">
-                                                <label class="form-check-label h2" for="flexSwitchCheckDefault"> Uvas </label>
+                                                <label class="form-check-label h2" for="flexSwitchCheckDefault"> Grapes </label>
                                             </div>     
                                         </div>
                                     </div>
@@ -275,7 +277,7 @@
                                                 </div>
                                             </div>
                                             <div class="col">
-                                                <label class="form-check-label h2" for="flexSwitchCheckDefault"> Frambuesas </label>
+                                                <label class="form-check-label h2" for="flexSwitchCheckDefault"> Raspberries </label>
                                             </div>     
                                         </div>
                                     </div>
@@ -302,7 +304,7 @@
                                                 </div>
                                             </div>
                                             <div class="col">
-                                                <label class="form-check-label h2 " for="flexSwitchCheckDefault"> Fresas </label>
+                                                <label class="form-check-label h2 " for="flexSwitchCheckDefault"> Strawberries </label>
                                             </div>     
                                         </div>
                                     </div>
@@ -323,198 +325,59 @@
         <!-- pastel nuevo fin -->
 
 
-        <!-- pastel viejo 
-        <div class="crearpastel">
-                <div class="container-fluid">
-                     <div class="row">
-                             <div class="col-md-12">
-                                 <div class="capa1">
-                                     <div class="carousel slide" id="carousel-847845">
-                                             <ol class="carousel-indicators">
-                                                     <li data-slide-to="0" data-target="#carousel-847845" class="active">
-                                                     </li>
-                                                     <li data-slide-to="1" data-target="#carousel-847845">
-                                                     </li>
-                                                     <li data-slide-to="2" data-target="#carousel-847845">
-                                                     </li>
-                                             </ol>
-                                             <div class="carousel-inner">
-                                                     <div class="carousel-item active">
-                                                             <img class="d-block w-100" alt="Carousel Bootstrap First" src="img/capas/ch_cho.png" />
-                                                     </div>
-                                                     <div class="carousel-item">
-                                                             <img class="d-block w-100" alt="Carousel Bootstrap Second" src="img/capas/ch_fre.jpeg" />
-                                                     </div>
-                                                     <div class="carousel-item">
-                                                             <img class="d-block w-100" alt="Carousel Bootstrap Third" src="img/capas/ch_vai.jpeg" />
-    
-                                                     </div>
-                                             </div> <a class="carousel-control-prev" href="#carousel-847845" data-slide="prev"><span class="carousel-control-prev-icon"></span> <span class="sr-only">Previous</span></a> <a class="carousel-control-next" href="#carousel-847845" data-slide="next"><span class="carousel-control-next-icon"></span> <span class="sr-only">Next</span></a>
-                                     </div>
-                                </div>
-                                 
-                                <div class="capa2">
-                                    
-                                     <div class="carousel slide" id="carousel-414528">
-                                             <ol class="carousel-indicators">
-                                                     <li data-slide-to="0" data-target="#carousel-414528" class="active">
-                                                     </li>
-                                                     <li data-slide-to="1" data-target="#carousel-414528">
-                                                     </li>
-                                                     <li data-slide-to="2" data-target="#carousel-414528">
-                                                     </li>
-                                             </ol>
-                                             <div class="carousel-inner">
-                                                     <div class="carousel-item active">
-                                                             <img class="d-block w-100" alt="Carousel Bootstrap First" src="img/capas/med_cho.png" />
-                                                             <div class="carousel-caption">
-                                                         </div>
-                                                     </div>
-                                                     <div class="carousel-item">
-                                                             <img class="d-block w-100" alt="Carousel Bootstrap Second" src="https://www.layoutit.com/img/sports-q-c-1600-500-2.jpg" />
-                                                             <div class="carousel-caption">
-                                                                     <h4>
-                                                                             Second Thumbnail label
-                                                                     </h4>
-                                                                     <p>
-                                                                             Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                                                                     </p>
-                                                             </div>
-                                                     </div>
-                                                     <div class="carousel-item">
-                                                             <img class="d-block w-100" alt="Carousel Bootstrap Third" src="https://www.layoutit.com/img/sports-q-c-1600-500-3.jpg" />
-                                                             <div class="carousel-caption">
-                                                                     <h4>
-                                                                             Third Thumbnail label
-                                                                     </h4>
-                                                                     <p>
-                                                                             Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                                                                     </p>
-                                                             </div>
-                                                     </div>
-                                             </div> <a class="carousel-control-prev" href="#carousel-414528" data-slide="prev"><span class="carousel-control-prev-icon"></span> <span class="sr-only">Previous</span></a> <a class="carousel-control-next" href="#carousel-414528" data-slide="next"><span class="carousel-control-next-icon"></span> <span class="sr-only">Next</span></a>
-                                     </div>
-                                    </div>
-                                    <div class="capa3">
-                                        
-                                     <div class="carousel slide" id="carousel-208079">
-                                             <ol class="carousel-indicators">
-                                                     <li data-slide-to="0" data-target="#carousel-208079" class="active">
-                                                     </li>
-                                                     <li data-slide-to="1" data-target="#carousel-208079">
-                                                     </li>
-                                                     <li data-slide-to="2" data-target="#carousel-208079">
-                                                     </li>
-                                             </ol>
-                                             <div class="carousel-inner">
-                                                     <div class="carousel-item active">
-                                                             <img class="d-block w-100" alt="Carousel Bootstrap First" src="img/capas/gra_cho.png" />
-                                                             <div class="carousel-caption">
-    
-                                                             </div>
-                                                     </div>
-                                                     <div class="carousel-item">
-                                                             <img class="d-block w-100" alt="Carousel Bootstrap Second" src="https://www.layoutit.com/img/sports-q-c-1600-500-2.jpg" />
-                                                             <div class="carousel-caption">
-                                                                     <h4>
-                                                                             Second Thumbnail label
-                                                                     </h4>
-                                                                     <p>
-                                                                             Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                                                                     </p>
-                                                             </div>
-                                                     </div>
-                                                     <div class="carousel-item">
-                                                             <img class="d-block w-100" alt="Carousel Bootstrap Third" src="https://www.layoutit.com/img/sports-q-c-1600-500-3.jpg" />
-                                                             <div class="carousel-caption">
-                                                                     <h4>
-                                                                             Third Thumbnail label
-                                                                     </h4>
-                                                                     <p>
-                                                                             Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                                                                     </p>
-                                                             </div>
-                                                     </div>
-                                             </div> <a class="carousel-control-prev" href="#carousel-208079" data-slide="prev"><span class="carousel-control-prev-icon"></span> <span class="sr-only">Previous</span></a> <a class="carousel-control-next" href="#carousel-208079" data-slide="next"><span class="carousel-control-next-icon"></span> <span class="sr-only">Next</span></a>
-                                     </div> 
-                                        <div class="botonestiloenviar">
-                                                <button type="button" class="btn btn-block btn-lg btn-outline-success">
-                                                     Enviar
-                                                </button>
-                                        </div>
-                                </div>
-                                     
-                                </div>
-                        </div>
-                </div>
-        </div>
-        <!-- Breadcrumb End -->
-
-
 
         <!-- Footer Section Begin -->
-        <!-- Footer Section Begin -->
-        <footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="footer__widget">
-                            <h6>Horario</h6>
-                            <ul>
-                                <li>Lunes - Viernes: 08:00 am – 08:30 pm</li>
-                                <li>Sabado: 10:00 am – 16:30 pm</li>
-                                <li>Domingo: 10:00 am – 16:30 pm</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="footer__about">
-                            <div class="footer__logo">
-                                <a href="#"><img src="img/footer-logo.png" alt=""></a>
-                            </div>
-
-                            <div class="footer__social">
-                                <a href="https://www.facebook.com/Sweet-Cream-109388668488078"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-youtube-play"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
+            <footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-7">
-                            <p class="copyright__text text-white"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | <a target="_blank">Universidad Tecnológica de Tecámac</a>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            </p>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="footer__widget">
+                                <h6>Service hours</h6>
+                                <ul>
+                                    <li>Monday - Friday: 08:00 a.m. – 08:30 p.m.</li>
+                                    <li>Saturday: 10:00 am - 16:30 pm</li>
+                                    <li>Sunday: 10:00 am – 16:30 pm</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="col-lg-5">
-                            <div class="copyright__widget">
-                               
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="footer__about">
+                                <div class="footer__logo">
+                                    <a href="#"><img src="img/footer-logo.png" alt=""></a>
+                                </div>
+
+                                <div class="footer__social">
+                                    <a href="https://www.facebook.com/Sweet-Cream-109388668488078"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </footer>
-        <!-- Footer Section End -->
+                <div class="copyright">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <p class="copyright__text text-white"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | <a target="_blank">Universidad Tecnológica de Tecámac</a>
 
-        <!-- Footer Section End -->
+                                </p>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="copyright__widget">
+                                    <ul>
 
-        <!-- Search Begin -->
-        <div class="search-model">
-            <div class="h-100 d-flex align-items-center justify-content-center">
-                <div class="search-close-switch">+</div>
-                <form class="search-model-form">
-                    <input type="text" id="search-input" placeholder="Search here.....">
-                </form>
-            </div>
-        </div>
-        <!-- Search End -->
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- Footer Section End -->
 
         <!-- Js Plugins -->
         <script src="js/jquery-3.3.1.min.js"></script>

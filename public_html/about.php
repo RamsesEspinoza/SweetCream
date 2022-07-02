@@ -75,10 +75,11 @@
                                         <div class="header__top__left">
                                             <div class="header__top__left">
                                                 <ul>
-                                                    <li><a href="login.php">Bienvenido <?php include './nombre-usuario.php'; ?></a> <span class="arrow_carrot-down"></span>
+                                                    <li><a href="login.php"><?php include './nombre-usuario.php'; ?></a> <span class="arrow_carrot-down"></span>
                                                         <ul>
-                                                            <div> <a href="logout.php"><li>Cerrar Sesion</li></a></div>
+                                                            <div> <a href="logout.php"><li>Salir</li></a></div>
                                                         </ul>
+                                                        <li><a href="./aboutEng.php">English</a></li>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -109,9 +110,9 @@
                             <nav class="header__menu mobile-menu">
                                 <ul>
                                     <li><a href="./index.php">Inicio</a></li>
-                                    <li class="active"><a href="./about.html">Acerca de</a></li>
+                                    <li class="active"><a href="./about.php">Acerca de</a></li>
                                     <li><a href="./catalogo.php">Tienda</a></li>
-                                    <li><a href="./blog.html">¡Crea tu propio pastel!</a></li>
+                                    <li><a href="./blog.php">¡Crea tu propio pastel!</a></li>
                                     <li><a href="./contact.php">Contactanos</a></li>
                                 </ul>
                             </nav>
@@ -318,7 +319,7 @@
 
                                 </div>
                                 <div class="blog__item__text">
-                                    <h2>Inspiuración y motivaciones</h2>
+                                    <h2>Inspiración y motivaciones</h2>
                                     <p>Es común escuchar a los docentes decir en sus conversaciones cotidianas: “ahora todo es copiar y pegar”, “Internet no deja pensar”, “los jóvenes ya no saben lo que es un libro”, “le puse cero en el trabajo por plagio”, entre otras frases relacionadas con el popular “copiar y pegar” que actualmente domina las instituciones educativas, en especial las de educación superior, teniendo en cuenta que en ellas la exigencia de trabajos escritos es constante. Ya sea un resumen, un ensayo o un proyecto de investigación, Internet se ha convertido en la panacea del estudiante moderno para salir bien librado de todo texto que le sea solicitado. Muy remotas quedaron ya aquellas tardes completas en la biblioteca, luchas por obtener el único ejemplar de algún libro, o los rimeros de fotocopias, piensan algunos profesores con nostalgia.</p>
 
                                 </div>
@@ -329,7 +330,7 @@
 
                                 </div>
                                 <div class="blog__item__text">
-                                    <h2>Proncipios y valores</h2>
+                                    <h2>Principios y valores</h2>
                                     <p>Es común escuchar a los docentes decir en sus conversaciones cotidianas: “ahora todo es copiar y pegar”, “Internet no deja pensar”, “los jóvenes ya no saben lo que es un libro”, “le puse cero en el trabajo por plagio”, entre otras frases relacionadas con el popular “copiar y pegar” que actualmente domina las instituciones educativas, en especial las de educación superior, teniendo en cuenta que en ellas la exigencia de trabajos escritos es constante. Ya sea un resumen, un ensayo o un proyecto de investigación, Internet se ha convertido en la panacea del estudiante moderno para salir bien librado de todo texto que le sea solicitado. Muy remotas quedaron ya aquellas tardes completas en la biblioteca, luchas por obtener el único ejemplar de algún libro, o los rimeros de fotocopias, piensan algunos profesores con nostalgia.</p>
 
                                 </div>

@@ -18,7 +18,7 @@
 
 
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Sweet Cream</title>
+        <title>Home</title>
         <!-- segunda version -->
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
@@ -79,53 +79,53 @@
             <!-- Header Section Begin -->
             <header class="header">
                 <div class="header__top">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="header__top__inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="header__top__inner">
+                                <div class="header__top__left">
                                     <div class="header__top__left">
-                                        <div class="header__top__left">
-                                            <ul>
-                                                <li><a href="login.php"><?php include './nombre-usuario.php'; ?></a> <span class="arrow_carrot-down"></span>
-                                                    <ul>
-                                                        <div><a href="logout.php"><li>Salir</li></a></div>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="./indexEng.php">English</a></li>
+                                        <ul>
+                                            <li><a href="login.php"><?php include './nombre-usuarioEng.php'; ?></a> <span class="arrow_carrot-down"></span>
+                                                <ul>
+                                                    <div><a href="logout.php"><li>Log out</li></a></div>
+                                                </ul>
+                                            </li>
+                                            <li><a href="./index.php">Español</a></li>
                                                 
-                                                
-                                            </ul>
-                                        </div>
+                                           
+                                        </ul>
                                     </div>
-                                    <div class="header__logo">
-                                        <a href="./index.php"><img src="img/logo.png" alt=""></a>
+                                </div>
+                                <div class="header__logo">
+                                    <a href="./index.php"><img src="img/logo.png" alt=""></a>
+                                </div>
+                                <div class="header__top__right">
+                                    <div class="header__top__right__links">
+                                        <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
+                                        <a href="#" ><img src="img/icon/heart.png" alt=""></a>
                                     </div>
-                                    <div class="header__top__right">
-                                        <div class="header__top__right__links">
-                                            <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
-                                            <a href="#"><img src="img/icon/heart.png" alt=""></a>
-                                        </div>
-                                        <div class="header__top__right__cart">
-                                            <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
-                                            <div class="cart__price">Carrito: <span>$0.00</span></div>
-                                        </div>
+                                    <div class="header__top__right__cart">
+                                        <a href="#" data-toggle="modal" data-target="#exampleModal"><img src="img/icon/cart.png" alt="" > <span>0</span></a>
+                                        <div class="cart__price">Carrito: <span>$0.00</span></div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="canvas__open"><i class="fa fa-bars"></i></div>
                     </div>
+                    <div class="canvas__open"><i class="fa fa-bars"></i></div>
                 </div>
+            </div>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
                             <nav class="header__menu mobile-menu">
                                 <ul>
-                                    <li class="active"><a href="./index.php">Inicio</a></li>
-                                    <li><a href="./about.php">Acerca de</a></li>
-                                    <li><a href="./catalogo.php">Tienda</a></li>
-                                    <li><a href="./blog.php">¡Crea tu propio pastel!</a></li>
-                                    <li><a href="./contact.php">Contactanos</a></li>
+                                    <li  class="active"><a href="eng/indexEng.php">Home</a></li>
+                                    <li><a href="./aboutEng.php">About</a></li>
+                                    <li><a href="./catalogoEng.php">Store</a></li>
+                                    <li> <a href="./blogEng.php">Create your own cake!</a></li>
+                                    <li><a href="./contactEng.php">Contact</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -142,9 +142,13 @@
                             <div class="row d-flex justify-content-center">
                                 <div class="col-lg-8">
                                     <div class="hero__text">
-                                        <h1>¡¡Oferta!!</h1>
+                                        <div class="row">
+                                            <i class="fa-solid fa-quote-left"></i>
+                                            <h3 class="quote"></h3>
+                                        </div>
+                                        <i class="fa-solid fa-quote-right float-right" ></i> 
                                         <h5>ㅤ</h5>
-                                        <h5>Con cada pastel que compre se lleva gratis 2 velas de numeros<br></h5>  
+                                        <p class="author"></p>
                                     </div>
 
                                 </div>
@@ -156,9 +160,23 @@
                             <div class="row d-flex justify-content-center">
                                 <div class="col-lg-8">
                                     <div class="hero__text">
-                                        <h2>Horario entre semana</h2>
+                                        <h1>Offer!</h1>
                                         <h5>ㅤ</h5>
-                                        <h4>Lunes a viernes de 8:00 A.M a 8:30 P.M<br></h4>
+                                        <h5>With each cake you buy you get 2 number candles for free<br></h5>  
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero__item set-bg" data-setbg="img/hero/hero-1.jpg">
+                        <div class="container">
+                            <div class="row d-flex justify-content-center">
+                                <div class="col-lg-8">
+                                    <div class="hero__text">
+                                        <h2>Weekday hours</h2>
+                                        <h5>ㅤ</h5>
+                                        <h4>Monday to Friday from 8:00 AM to 8:30 PM<br></h4>
                                         <h5>ㅤ</h5>
 
                                     </div>
@@ -178,8 +196,8 @@
                     <div class="row">
                         <div class="col-lg-12 text-center">
                             <div class="section-title">
-                                <span>Reseñas</span>
-                                <h2>de algunos de nuestros clientes</h2>
+                                <span>Reviews</span>
+                                <h2>from some of our clients</h2>
                             </div>
                         </div>
                     </div>
@@ -281,10 +299,10 @@
                         <div class="col-lg-4 p-0">
                             <div class="instagram__text">
                                 <div class="section-title">
-                                    <span>Siguenos en Instagram</span>
-                                    <h2>Los momentos dulces se guardan como recuerdos.</h2>
+                                    <span>Follow us on Instagram</span>
+                                    <h2>Sweet moments are kept as memories.</h2>
                                 </div>
-                                <h5><i class="fa fa-instagram"></i> @sweetcream</h5>
+                                <h5><i class="fa fa-instagram"></i> @sweetcreamEng</h5>
                             </div>
                         </div>
                         <div class="col-lg-8">
@@ -354,11 +372,11 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="footer__widget">
-                                <h6>Horario</h6>
+                                <h6>Service hours</h6>
                                 <ul>
-                                    <li>Lunes - Viernes: 08:00 am – 08:30 pm</li>
-                                    <li>Sabado: 10:00 am – 16:30 pm</li>
-                                    <li>Domingo: 10:00 am – 16:30 pm</li>
+                                    <li>Monday - Friday: 08:00 a.m. – 08:30 p.m.</li>
+                                    <li>Saturday: 10:00 am - 16:30 pm</li>
+                                    <li>Sunday: 10:00 am – 16:30 pm</li>
                                 </ul>
                             </div>
                         </div>
@@ -383,7 +401,7 @@
                         <div class="row">
                             <div class="col-lg-7">
                                 <p class="copyright__text text-white"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | <a target="_blank">Universidad Tecnológica de Tecámac</a>
+                                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | <a target="_blank">Universidad Tecnológica de Tecámac</a>
 
                                 </p>
                             </div>
@@ -403,16 +421,7 @@
 
         </section>
 
-        <!-- Search Begin -->
-        <div class="search-model">
-            <div class="h-100 d-flex align-items-center justify-content-center">
-                <div class="search-close-switch">+</div>
-                <form class="search-model-form">
-                    <input type="text" id="search-input" placeholder="Search here.....">
-                </form>
-            </div>
-        </div>
-        <!-- Search End -->
+        
 
         <!-- Js Plugins -->
         <script src="js/jquery-3.3.1.min.js"></script>

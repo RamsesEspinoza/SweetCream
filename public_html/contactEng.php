@@ -56,58 +56,60 @@
     <!-- Offcanvas Menu End -->
 
     <!-- Header Section Begin -->
-    <header class="header">
-        <div class="header__top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="header__top__inner">
-                            <div class="header__top__left">
-                                <ul>
-                                    <li><a href="login.php"> <?php include './nombre-usuario.php'; ?></a> <span class="arrow_carrot-down"></span>
+        <header class="header">
+            <div class="header__top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="header__top__inner">
+                                <div class="header__top__left">
+                                    <div class="header__top__left">
                                         <ul>
-                                            <div><a href="logout.php"><li>Salir</li></a></div>
+                                            <li><a href="login.php"><?php include './nombre-usuarioEng.php'; ?></a> <span class="arrow_carrot-down"></span>
+                                                <ul>
+                                                    <div><a href="logout.php"><li>Log out</li></a></div>
+                                                </ul>
+                                            </li>
+                                            <li><a href="./contact.php">Español</a></li>
                                         </ul>
-                                        <li><a href="./contactEng.php">English</a></li>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="header__logo">
-                                <a href="./index.php"><img src="img/logo.png" alt=""></a>
-                            </div>
-                            <div class="header__top__right">
-                                <div class="header__top__right__links">
-                                    <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
-                                    <a href="#"><img src="img/icon/heart.png" alt=""></a>
+                                    </div>
                                 </div>
-                                <div class="header__top__right__cart">
-                                    <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
-                                    <div class="cart__price">Cart: <span>$0.00</span></div>
+                                <div class="header__logo">
+                                    <a href="./index.php"><img src="img/logo.png" alt=""></a>
+                                </div>
+                                <div class="header__top__right">
+                                    <div class="header__top__right__links">
+                                        <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
+                                        <a href="#" ><img src="img/icon/heart.png" alt=""></a>
+                                    </div>
+                                    <div class="header__top__right__cart">
+                                        <a href="#" data-toggle="modal" data-target="#exampleModal"><img src="img/icon/cart.png" alt="" > <span>0</span></a>
+                                        <div class="cart__price">Cart: <span>$0.00</span></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="canvas__open"><i class="fa fa-bars"></i></div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <nav class="header__menu mobile-menu">
-                        <ul>
-                            <li><a href="./index.php">Inicio</a></li>
-                            <li><a href="./about.php">Acerca de</a></li>
-                            <li><a href="./catalogo.php">Tienda</a></li>
-                            <li><a href="./blog.php">¡Crea tu propio pastel!</a></li>
-                            <li class="active"><a href="./contact.php">Contactanos</a></li>
-                        </ul>
-                    </nav>
+                    <div class="canvas__open"><i class="fa fa-bars"></i></div>
                 </div>
             </div>
-        </div>
-    </header>
-    <!-- Header Section End -->
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="header__menu mobile-menu">
+                            <ul>
+                                <li><a href="./indexEng.php">Home</a></li>
+                                <li><a href="./aboutEng.php">About</a></li>
+                                <li><a href="./catalogoEng.php">Store</a></li>
+                                <li><a href="./blogEng.php">Create your own cake!</a></li>
+                                <li   class="active"><a href="./contactEng.php">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- Header Section End -->
 
     <!-- Contact Section Begin -->
     <section class="contact spad">
@@ -135,7 +137,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="contact__address__item">
-                            <h6>Lunes - Viernes</h6>
+                            <h6>Monday - Friday</h6>
                             <ul>
                                 <li>
                                     <span class="icon_pin_alt"></span>
@@ -152,7 +154,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="contact__address__item">
-                            <h6>Sabado</h6>
+                            <h6>Saturday</h6>
                             <ul>
                                 <li>
                                     <span class="icon_pin_alt"></span>
@@ -169,7 +171,7 @@
                     </div>
                     <div class="col-lg-4 col-md-6 col-sm-6">
                         <div class="contact__address__item">
-                            <h6>Domingo</h6>
+                            <h6>Sunday</h6>
                             <ul>
                                 <li>
                                     <span class="icon_pin_alt"></span>

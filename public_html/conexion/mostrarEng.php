@@ -19,7 +19,7 @@ if ($inc) {
                     <div class="product__item__text">
                         <h6><a href="#"><?php echo $nombre; ?></a></h6>
                         <div class="product__item__price">$<?php echo $precio; ?>.00</div>
-                        <form action="./functions.php" method="POST">
+                        <form action="./functionsEng.php" method="POST">
                             <input type="text" class="form-control" id="idnombre" name="txtnombre" value="<?php echo $row["nombre"]; ?>" hidden="">
                             <input type="text" class="form-control" id="idnombre" name="txtprecio" value="<?php echo $row["precio"]; ?>" hidden="">
                             <div class="cart_add">
@@ -34,7 +34,7 @@ if ($inc) {
                                                 border-bottom: 2px solid darkorange;
                                             }
                                         </style>
-                                        <button type="submit" class="botonMenu">Agregar al carrito</button>
+                                        <button type="submit" class="botonMenu">Add to cart</button>
                                     </div>
                                 </div>
                             </div>

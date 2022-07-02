@@ -82,8 +82,12 @@
                                         <a href="#" ><img src="img/icon/heart.png" alt=""></a>
                                     </div>
                                     <div class="header__top__right__cart">
-                                        <a href="#" data-toggle="modal" data-target="#exampleModal"><img src="img/icon/cart.png" alt="" > <span>0</span></a>
-                                        <div class="cart__price">Cart: <span>$0.00</span></div>
+                                        <a href="#" data-toggle="modal" data-target="#exampleModal"><img src="img/icon/cart.png" alt="" > <?php
+                                            include ("./contadorCarrito.php");
+                                            ?></a>
+                                        <div class="cart__price">Cart: <?php
+                                            include ("./contadorPresio.php");
+                                            ?></div>
                                     </div>
                                 </div>
                             </div>
@@ -166,7 +170,7 @@
                 <div class="row">
 
                     <?php
-                    include ("./conexion/mostrar.php");
+                    include ("./conexion/mostrarEng.php");
                     ?>
 
                 </div>
@@ -191,45 +195,48 @@
         </section>
         <!-- Shop Section End -->
 
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Items in cart</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <!-- Tabla de agregar al carrito -->
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <table class="table">
-                                        <thead>
-                                            <tr>
-                                                <th>Product</th>
-                                                <th>Price</th>
-                                                <th>Cantidad</th>
-                                            </tr>
-                                            <?php
-                                            include ("./mostrarCartEng.php");
-                                            ?>
-                                        </thead>
-                                    </table>
-                                </div>
+       <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Items in cart</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Tabla de agregar al carrito -->
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Product</th>
+                                            <th>Price</th>
+                                            <th>Amount</th>
+                                        </tr>
+                                        <?php
+                                        include ("./mostrarCart.php");
+                                        ?>
+                                    </thead>
+                                </table>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Empty cart</button>
-                            <button type="button" class="btn btn-success">Pay</button>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <div class="cart_delete">
+                            <a href="./eliminarCarritoENG.php" class="btn btn-primary">Clean cart</a>
                         </div>
+                        <button type="button" class="btn btn-success">Pay</button>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
+
   <!-- Footer Section Begin -->
         <footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
             <div class="container">
@@ -283,8 +290,7 @@
         </footer>
         <!-- Footer Section End -->
 
-        
-
+           
         <!-- Js Plugins -->
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
@@ -295,6 +301,7 @@
         <script src="js/owl.carousel.min.js"></script>
         <script src="js/jquery.nicescroll.min.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/confirmacionEng.js"></script>
     </body>
 
 </html>

@@ -17,9 +17,5 @@
             }
         }
     } else {
-            echo "<script>
-                alert('You must log in to see this section');
-               
-                </script>";
 }
 ?>

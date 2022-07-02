@@ -16,7 +16,7 @@ $inc = include("./conexion/conexion.php");
                     $query = 'UPDATE carrito SET cantidad = \'' . ++$cantidad . '\' WHERE Nombre = \'' . $_POST["txtnombre"] . '\'';
                     $result = mysqli_query($conn, $query) or die(mysqli_error());
                     echo "<script>
-                    window.location.href = './catalogo.php';
+                    window.location.href = './catalogoEng.php';
                     </script>";
                 }
             } 
@@ -26,7 +26,7 @@ $inc = include("./conexion/conexion.php");
                     \'' . $correoV . '\',1)';
                 $result = mysqli_query($conn, $query) or die(mysqli_error());
                 echo "<script>
-                    window.location.href = './catalogo.php';
+                    window.location.href = './catalogoEng.php';
                      </script>";
         }
     }

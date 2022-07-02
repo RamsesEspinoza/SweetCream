@@ -1,21 +1,19 @@
 <?php
-    
-    $inc = include("./conexion/conexion.php");
-    
-  if (!empty($_POST['email']) && !empty($_POST['password'])) {
+$inc = include("./conexion/conexion.php");
+
+if (!empty($_POST['email']) && !empty($_POST['password'])) {
     $sql = "INSERT INTO usuarios (email, password,nombre) VALUES (?, ?, ?)";
-    $stmt = mysqli_prepare($conn,$sql);
+    $stmt = mysqli_prepare($conn, $sql);
     //$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-    mysqli_stmt_bind_param($stmt, "sss", $_POST['email'],$_POST['password'],$_POST['nombre']);
+    mysqli_stmt_bind_param($stmt, "sss", $_POST['email'], $_POST['password'], $_POST['nombre']);
 
     if (mysqli_stmt_execute($stmt)) {
-        
-      header("location: login.php");
+
+        header("location: login.php");
     } else {
-      echo "Error";
+        echo "Error";
     }
-  }
-    
+}
 ?>
 
 <!doctype html>
@@ -36,7 +34,7 @@
         <div class="wrapper bg-white">
             <div class="h2 text-center" >¡Bienvenido a Sweet Cream!</div>
             <div class="h4 text-muted text-center pt-2">Registrate</div>
-            
+
             <form method="post" class="pt-3">
                 <div class="form-group py-2">
                     <div class="input-field"> 
@@ -62,52 +60,15 @@
                         <input type="password" name="confirm_password" placeholder="Confirma tu contraseña">
                     </div>
                 </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="flexCheckDefault" style="background-color: #533f03">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Default checkbox
+                    </label>
+                </div>
                 <button class="btn btn-block text-center my-3" type="submit" value="Registrarme">Registrarme</button>
                 <div class="text-center pt-3 text-muted"><span>o <br><a href="login.php">Inicia Sesion</a></span></div>
-                
-                
             </form>
         </div>
     </body>
 </html>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <!--<body>
-        <header>
-            <a href="/php-login">¡Bienvenido a Sweet Cream!</a>
-        </header>
-        
-        
-        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-        <link rel="stylesheet" href="css/sesion_style.css" type="text/css">
-        
-        <?php if(!empty($message)): ?>
-      <p> <?= $message ?></p>
-    <?php endif; ?>
-        
-        <h1>Registrate</h1>
-        <span>o <a href="login.php">Inicia Sesion</a></span>
-        
-        <form  method="post">
-        
-        <input type="text" name="nombre" placeholder="Ingresa tu Nombre">
-    <input type="text" name="email" placeholder="Ingresa tu correo electronico">
-    <input type="password" name="password" placeholder="Ingresa tu contraseña">
-    <input type="password" name="confirm_password" placeholder="Confirma tu contraseña">
-    <input type="submit" value="Registrarme"> </form>
-        
-
-    </body>
-</html>-->

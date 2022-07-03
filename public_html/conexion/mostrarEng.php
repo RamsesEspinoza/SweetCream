@@ -11,9 +11,9 @@ if ($inc) {
             ?>
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="product__item">
-                    <div class="product__item__pic set-bg" data-setbg="<?php $row['img_pastel']; ?>">
+                    <div class="product__item__pic set-bg" data-setbg="<?php echo $row['img_pastel']; ?>">
                         <div class="product__label">
-                            <span>Cupcake</span>
+                            <span>SweetCream</span>
                         </div>
                     </div>
                     <div class="product__item__text">

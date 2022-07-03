@@ -106,7 +106,7 @@
                             <ul>
                                 <li><a href="./index.php">Inicio</a></li>
                                 <li><a href="./about.php">Acerca de</a></li>
-                                <li class="active"><a href="./catalogo.php">Tienda</a></li>
+                                <li class="active"><a href="./catalogo.php?pagina=1">Tienda</a></li>
                                 <li><a href="./blog.php">¡Crea tu propio pastel!</a></li>
                                 <li><a href="./contact.php">Contactanos</a></li>
                             </ul>
@@ -128,7 +128,9 @@
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="breadcrumb__links">
-                            <a href="./gestionpastel.php">Gestionar</a>
+                            <?php
+                            include ("./conexion/ocultarGestion.php");
+                            ?>
                             <span>Tienda</span>
                         </div>
                     </div>
@@ -173,23 +175,95 @@
                 <div class="row">
 
                     <?php
-                    include ("./conexion/mostrar.php");
+                    $inc = include("./conexion/conexion.php");
+                    if (!$_GET) {
+                        echo "<script>
+                            window.location.href = './catalogo.php?pagina=1';
+                              </script>";
+                    }
+                    if ($inc) {
+                        $consulta = "SELECT * FROM pastel_n";
+                        $resultado = mysqli_query($conn, $consulta);
+                        if ($resultado) {
+                            while ($row = $resultado->fetch_array()) {
+                                $articulos_x_pagina = 8;
+                                $aja = count($row, COUNT_NORMAL);
+                                $cantidad = $aja - 6;
+                                $smn = $cantidad / $articulos_x_pagina;
+                                $paginas = ceil($smn);
+                            }
+                        }
+                        $iniciar = ($_GET['pagina'] - 1) * $articulos_x_pagina;
+                        $hey = strval($iniciar);
+                        $sql = "SELECT * FROM pastel_n LIMIT ".$hey.",8";
+                        $resul = mysqli_query($conn, $sql);
+                        if ($resul) {
+                            while ($row = $resul->fetch_array()) {
+                                $id = $row['pastel_id'];
+                                $nombre = $row['nombre'];
+                                $precio = $row['precio'];
+                                ?>
+                                <div class="col-lg-3 col-md-6 col-sm-6">
+                                    <div class="product__item">
+                                        <div class="product__item__pic set-bg" data-setbg="<?php echo $row['img_pastel']; ?>">
+                                            <div class="product__label">
+                                                <span>SweetCream</span>
+                                            </div>
+                                        </div>
+                                        <div class="product__item__text">
+                                            <h6><a href="#"><?php echo $nombre; ?></a></h6>
+                                            <div class="product__item__price">$<?php echo $precio; ?>.00</div>
+                                            <form action="./functions.php" method="POST">
+                                                <input type="text" class="form-control" id="idnombre" name="txtnombre" value="<?php echo $row["nombre"]; ?>" hidden="">
+                                                <input type="text" class="form-control" id="idnombre" name="txtprecio" value="<?php echo $row["precio"]; ?>" hidden="">
+                                                <div class="cart_add">
+                                                    <div class="product__item__text">
+                                                        <div class="product__item__price">ㅤㅤㅤㅤㅤ</div>
+                                                        <div class="cart_add">
+                                                            <style>
+                                                                .botonMenu {
+                                                                    background-color: transparent;
+                                                                    border: none;
+                                                                    font-weight:  bolder;
+                                                                    border-bottom: 2px solid darkorange;
+                                                                }
+                                                            </style>
+                                                            <button type="submit" class="botonMenu">Agregar al carrito</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php
+                            }
+                        }
+                        $aja1 = "SELECT COUNT(pastel_id) FROM pastel_n";
+                        $pdo = mysqli_query($conn, $aja1);
+                        if ($pdo) {
+                            while ($rowi = $pdo->fetch_array()) {
+                                $aja2 = $rowi['COUNT(pastel_id)'];
+                            }
+                        }
+                    }
                     ?>
+
 
                 </div>
                 <div class="shop__last__option">
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="shop__pagination">
-                                <a href="#">1</a>
-                                <a href="#">2</a>
-                                <a href="#">3</a>
-                                <a href="#"><span class="arrow_carrot-right"></span></a>
+                                <?php for ($i = 0; $i < $paginas; $i++): ?>
+                                    <a href="catalogo.php?pagina=<?php echo $i + 1 ?>"><?php echo $i + 1 ?></a>
+                                <?php endfor ?>
+                                <a href="catalogo.php?pagina=<?php echo$_GET['pagina'] + 1 ?>"><span class="arrow_carrot-right"></span></a>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="shop__last__text">
-                                <p>Showing 1-9 of 10 results</p>
+                                <p>Showing 8 results of <?php echo $aja2;?> results</p>
                             </div>
                         </div>
                     </div>

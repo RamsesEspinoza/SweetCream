@@ -11,9 +11,9 @@ if ($inc) {
             ?>
             <div class="col-lg-3 col-md-6 col-sm-6">
                 <div class="product__item">
-                    <div class="product__item__pic set-bg" data-setbg="<?php $row['img_pastel']; ?>">
+                    <div class="product__item__pic set-bg" data-setbg="<?php echo $row['img_pastel']; ?>">
                         <div class="product__label">
-                            <span>Cupcake</span>
+                            <span>SweetCream</span>
                         </div>
                     </div>
                     <div class="product__item__text">
@@ -45,5 +45,11 @@ if ($inc) {
             <?php
         }
     }
+    $articulos_x_pagina = 9;
+// contar articulos de nuestra base de datos
+    $total_articulos_db = $resultado->rowCount();
+// echo$total_articulos_db;
+    $paginas = $total_articulos_db / 9;
+    $paginas = ceil($paginas);
 }
 ?>

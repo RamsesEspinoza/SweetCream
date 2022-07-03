@@ -95,13 +95,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     </div>
                 </div>
                 <div class="d-flex align-items-start">
-                    <!--<div class="remember"> 
-                        <label class="option text-muted"> Recuerdame <input type="radio" name="radio"> 
-                            <span class="checkmark"></span> 
-                        </label> 
-                    </div>-->
+                    <div class="remember"> 
+<!--<label class="option text-muted"> Terminos & condiciones <input type="checkbox" name="radio">
+    <span class="checkmark"></span> 
+</label> -->
+                    </div>
                 </div> 
-                <div class="text-center pt-3 text-muted"><a href="#" id="forgot">Olvidaste tu contraseña?</a></div>
+                <div class="text-center pt-3 text-muted"><a href="resetPass.php" id="forgot">Olvidaste tu contraseña?</a></div>
                 <button class="btn btn-block text-center my-3" type="submit" value="Ingresar">Iniciar Sesion</button>
                 <div class="text-center pt-3 text-muted">No tienes Cuenta? <a href="signup.php">Registrate</a></div>
                 <div class="text-center pt-3 text-muted"><span><a href="index.php">Revisar sin Iniciar Sesion</a></span></div>

@@ -131,7 +131,6 @@
                             <?php
                             include ("./conexion/ocultarGestion.php");
                             ?>
-                            <span>Tienda</span>
                         </div>
                     </div>
                 </div>
@@ -193,9 +192,14 @@
                                 $paginas = ceil($smn);
                             }
                         }
+                        if ($_GET['pagina'] > $paginas || $_GET['pagina'] <= 0) {
+                            echo "<script>
+                            window.location.href = './catalogo.php?pagina=1';
+                              </script>";
+                        }
                         $iniciar = ($_GET['pagina'] - 1) * $articulos_x_pagina;
                         $hey = strval($iniciar);
-                        $sql = "SELECT * FROM pastel_n LIMIT ".$hey.",8";
+                        $sql = "SELECT * FROM pastel_n LIMIT " . $hey . ",8";
                         $resul = mysqli_query($conn, $sql);
                         if ($resul) {
                             while ($row = $resul->fetch_array()) {
@@ -255,15 +259,19 @@
                     <div class="row">
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="shop__pagination">
-                                <?php for ($i = 0; $i < $paginas; $i++): ?>
+                                <?php
+                                for ($i = 0;
+                                        $i < $paginas;
+                                        $i++):
+                                    ?>
                                     <a href="catalogo.php?pagina=<?php echo $i + 1 ?>"><?php echo $i + 1 ?></a>
                                 <?php endfor ?>
-                                <a href="catalogo.php?pagina=<?php echo$_GET['pagina'] + 1 ?>"><span class="arrow_carrot-right"></span></a>
+                                <a href="catalogo.php?pagina=<?php echo$_GET['pagina'] + 1 ?>" ><span class="arrow_carrot-right"></span></a>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="shop__last__text">
-                                <p>Showing 8 results of <?php echo $aja2;?> results</p>
+                                <p>Showing 8 results of <?php echo $aja2; ?> results</p>
                             </div>
                         </div>
                     </div>

@@ -203,7 +203,6 @@
             </section>
             <!-- About Section End -->
 
-            <!-- Testimonial Section Begin -->
             <section class="testimonial spad">
                 <div class="container">
                     <div class="row">
@@ -216,89 +215,11 @@
                     </div>
                     <div class="row">
                         <div class="testimonial__slider owl-carousel">
-                            <div class="col-lg-6">
-                                <div class="testimonial__item">
-                                    <div class="testimonial__author">
-                                        <div class="testimonial__author__pic">
-                                            <img src="img/testimonial/ta-1.jpg" alt="">
-                                        </div>
-                                        <div class="testimonial__author__text">
-                                            <h5>Ramses Espinosa</h5>
-                                            <span>Técamac</span>
-                                        </div>
-                                    </div>
-                                    <div class="rating">
-                                        <span class="icon_star"></span>
-                                        <span class="icon_star"></span>
-                                        <span class="icon_star"></span>
-                                        <span class="icon_star"></span>
-                                        <span class="icon_star"></span>
-                                    </div>
+                            
+                            <?php
+                            include ("./mostrar_comentarios.php");
+                            ?>
 
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="testimonial__item">
-                                    <div class="testimonial__author">
-                                        <div class="testimonial__author__pic">
-                                            <img src="img/testimonial/ta-2.jpg" alt="">
-                                        </div>
-                                        <div class="testimonial__author__text">
-                                            <h5>Brayan Saldivar</h5>
-                                            <span>Ecatepec</span>
-                                        </div>
-                                    </div>
-                                    <div class="rating">
-                                        <span class="icon_star"></span>
-                                        <span class="icon_star"></span>
-                                        <span class="icon_star"></span>
-                                        <span class="icon_star"></span>
-                                        <span class="icon_star-half_alt"></span>
-                                    </div>
-
-                                </div>
-                            </div><div class="col-lg-6">
-                                <div class="testimonial__item">
-                                    <div class="testimonial__author">
-                                        <div class="testimonial__author__pic">
-                                            <img src="img/testimonial/ta-3.jpg" alt="">
-                                        </div>
-                                        <div class="testimonial__author__text">
-                                            <h5>Emmanuel Salas</h5>
-                                            <span>Técamac</span>
-                                        </div>
-                                    </div>
-                                    <div class="rating">
-                                        <span class="icon_star"></span>
-                                        <span class="icon_star"></span>
-                                        <span class="icon_star"></span>
-                                        <span class="icon_star"></span>
-                                        <span class="icon_star"></span>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="testimonial__item">
-                                    <div class="testimonial__author">
-                                        <div class="testimonial__author__pic">
-                                            <img src="img/testimonial/ta-4.jpg" alt="">
-                                        </div>
-                                        <div class="testimonial__author__text">
-                                            <h5>Irving García</h5>
-                                            <span>Zumpango</span>
-                                        </div>
-                                    </div>
-                                    <div class="rating">
-                                        <span class="icon_star"></span>
-                                        <span class="icon_star"></span>
-                                        <span class="icon_star"></span>
-                                        <span class="icon_star"></span>
-
-                                    </div>
-
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>

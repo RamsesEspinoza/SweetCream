@@ -193,7 +193,7 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="contact__text">
-                            <h3>¡Contactanos!</h3>
+                            <h3>¡Tu opinion es importante!</h3>
                             <ul>
                                 <li>El horario de Atencion es:</li>
                                 <li>Lunes - Viernes: 08:00 am – 08:30 pm</li>
@@ -205,16 +205,41 @@
                     </div>
                     <div class="col-lg-8">
                         <div class="contact__form">
-                            <form action="#">
+                            <?php
+                            if (isset($_SESSION["email"])) {
+                                $correoV = $_SESSION["email"];
+                            } else {
+                                $correoV = "alguien@gmail.com";
+                                
+                            }
+                            ?>
+                            <form action="comentarios.php" method="POST">
                                 <div class="row">
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="Nombre">
+                                        <input type="text" placeholder="Nombre" name="txtnombre" required="" value="<?php echo $nombre; ?>" hidden="">
                                     </div>
-                                    <div class="col-lg-6">
-                                        <input type="text" placeholder="Correo Electronico">
+                                    
+                                    <div class="col-lg-12">
+                                        
+                                        <select name="txtcalificacion" id="color" class="list">
+                                            
+                                            <option value="1">1 Estrella</option>
+                                            <option value="2">2 Estrellas</option>
+                                            <option value="3">3 Estrellas</option>
+                                            <option value="4">4 Estrellas</option>
+                                            <option value="5">5 Estrellas</option>
+                                           
+                                        </select>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <br>
+                           
+                                    <div class="col-lg-6" >
+                                        <input type="text" placeholder="Correo Electronico" name="txtcorreo" value="<?php echo $correoV; ?>" hidden="">
                                     </div>
                                     <div class="col-lg-12">
-                                        <textarea placeholder="Mensaje"></textarea>
+                                        <textarea placeholder="Mensaje" name="txtmensaje" required=""></textarea>
                                         <button type="submit" class="site-btn">Enviar</button>
                                     </div>
                                 </div>
@@ -298,47 +323,47 @@
             </div>
         </div>
         <!-- Search End -->
-<!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Articulos en carrito</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <!-- Tabla de agregar al carrito -->
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>Producto</th>
-                                            <th>Precio</th>
-                                            <th>Cantidad</th>
-                                        </tr>
-                                        <?php
-                                        include ("./mostrarCart.php");
-                                        ?>
-                                    </thead>
-                                </table>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Articulos en carrito</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Tabla de agregar al carrito -->
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Producto</th>
+                                                <th>Precio</th>
+                                                <th>Cantidad</th>
+                                            </tr>
+                                            <?php
+                                            include ("./mostrarCart.php");
+                                            ?>
+                                        </thead>
+                                    </table>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                        <div class="cart_delete">
-                            <a href="./eliminarPastel_1.php" class="btn btn-primary">Vaciar carrito</a>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            <div class="cart_delete">
+                                <a href="./eliminarPastel_1.php" class="btn btn-primary">Vaciar carrito</a>
+                            </div>
+                            <button type="button" class="btn btn-success">Pagar</button>
                         </div>
-                        <button type="button" class="btn btn-success">Pagar</button>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
         <!-- Js Plugins -->
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>

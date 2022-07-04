@@ -208,7 +208,7 @@
                                             <select name="txttipo" id="color" class="list">
                                                 <option value="1">Usuario</option>
                                                 <option value="2">Administrador</option>
-                                            </select><br>
+                                            </select><br><br>
                                         </div>
                                     <?php
                                     }

@@ -6,8 +6,9 @@
         $resultado = mysqli_query($conn, $consulta);
         if ($resultado) {
             while ($row = $resultado->fetch_array()) {
+                $presio=$row['resultado'];
                 ?>
-                <span>$<?php echo $row['resultado']; ?>.00</span>
+                <span>$<?php echo $presio; ?>.00</span>
                 <?php
             }
         }

@@ -147,8 +147,8 @@
 
 
                             <div class="pasteles">
-                                
-                                
+
+
                                 <div class="border m-4 position-relative " style="height: 100%; width: 90%; left: 5%; z-index: 0">
 
                                     <div class="carousel slide position-absolute top-50 start-50 translate-middle w-100" id="carousel-279847" style="z-index: 1;">
@@ -331,98 +331,131 @@
 
 
         <!-- Footer Section Begin -->
-            <footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
+        <footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="footer__widget">
+                            <h6>Service hours</h6>
+                            <ul>
+                                <li>Monday - Friday: 08:00 a.m. – 08:30 p.m.</li>
+                                <li>Saturday: 10:00 am - 16:30 pm</li>
+                                <li>Sunday: 10:00 am – 16:30 pm</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="footer__about">
+                            <div class="footer__logo">
+                                <a href="#"><img src="img/footer-logo.png" alt=""></a>
+                            </div>
+
+                            <div class="footer__social">
+                                <a href="https://www.facebook.com/Sweet-Cream-109388668488078"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="footer__widget">
-                                <h6>Service hours</h6>
+                        <div class="col-lg-7">
+                            <p class="copyright__text text-white"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | <a target="_blank">Universidad Tecnológica de Tecámac</a>
+
+                            </p>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="copyright__widget">
                                 <ul>
-                                    <li>Monday - Friday: 08:00 a.m. – 08:30 p.m.</li>
-                                    <li>Saturday: 10:00 am - 16:30 pm</li>
-                                    <li>Sunday: 10:00 am – 16:30 pm</li>
+
+
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-lg-6 col-md-6 col-sm-6">
-                            <div class="footer__about">
-                                <div class="footer__logo">
-                                    <a href="#"><img src="img/footer-logo.png" alt=""></a>
-                                </div>
-
-                                <div class="footer__social">
-                                    <a href="https://www.facebook.com/Sweet-Cream-109388668488078"><i class="fa fa-facebook"></i></a>
-                                    <a href="#"><i class="fa fa-twitter"></i></a>
-                                    <a href="#"><i class="fa fa-instagram"></i></a>
-                                    <a href="#"><i class="fa fa-youtube-play"></i></a>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
-                <div class="copyright">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-7">
-                                <p class="copyright__text text-white"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | <a target="_blank">Universidad Tecnológica de Tecámac</a>
-
-                                </p>
-                            </div>
-                            <div class="col-lg-5">
-                                <div class="copyright__widget">
-                                    <ul>
-
-
-                                    </ul>
+            </div>
+        </footer>
+        <!-- Footer Section End -->
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Items in cart</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Tabla de agregar al carrito -->
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Product</th>
+                                                <th>Price</th>
+                                                <th>Amount</th>
+                                            </tr>
+                                            <?php
+                                            include ("./mostrarCart.php");
+                                            ?>
+                                        </thead>
+                                    </table>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-            </footer>
-            <!-- Footer Section End -->
-<!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Items in cart</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <!-- Tabla de agregar al carrito -->
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>Product</th>
-                                            <th>Price</th>
-                                            <th>Amount</th>
-                                        </tr>
-                                        <?php
-                                        include ("./mostrarCart.php");
-                                        ?>
-                                    </thead>
-                                </table>
+
+
+                        <div class="modal-footer">
+
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="row">
+                                                            <div class="col-md-6 d-flex justify-content-center">
+
+                                                                <button type="button" class="btn btn-secondary center-block" data-dismiss="modal">Close</button>
+                                                            </div>
+                                                            <div class="col-md-6 d-flex justify-content-cente">
+
+                                                                <div class="cart_delete">
+                                                                    <a href="./eliminarPastel_1.php" class="btn btn-primary center-block">Clean cart</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <br><br><br>
+                                                        <div> 
+                                                            <div id="paypal-button-container"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <div class="cart_delete">
-                            <a href="./eliminarCarritoENG.php" class="btn btn-primary">Clean cart</a>
-                        </div>
-                        <button type="button" class="btn btn-success">Pay</button>
+
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
         <!-- Js Plugins -->
         <script src="js/jquery-3.3.1.min.js"></script>
@@ -437,6 +470,39 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
         <script src="js/mostar.js"></script>
         <script src="js/confirmacionEng.js"></script>
+        <script src="https://www.paypal.com/sdk/js?client-id=AdzEdUHZ41GJGmqaaQEq6W12NepCvy1--2chuk-VyJcP-vlGzWXIzA1j31lEwTBRPtqw3hy7Dscl2IrT&currency=MXN"></script>
+                <script>
+                                    paypal.Buttons({
+                                        // Sets up the transaction when a payment button is clicked
+                                        createOrder: (data, actions) => {
+                                            return actions.order.create({
+                                                purchase_units: [{
+                                                        amount: {
+                                                            value: <?php echo $presio; ?>  // Can also reference a variable or function
+                                                        }
+                                                    }]
+                                            });
+                                        },
+                                        // Finalize the transaction after payer approval
+                                        onApprove: (data, actions) => {
+                                            return actions.order.capture().then(function (orderData) {
+                                                // Successful capture! For dev/demo purposes:
+                                                console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+                                                const transaction = orderData.purchase_units[0].payments.captures[0];
+                                                alert(`Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`);
+                                                // When ready to go live, remove the alert and show a success message within this page. For example:
+                                                // const element = document.getElementById('paypal-button-container');
+                                                // element.innerHTML = '<h3>Thank you for your payment!</h3>';
+                                                // Or go to another URL:  actions.redirect('thank_you.html');
+                                            });
+                                        }
+                                    }).render('#paypal-button-container');
+        </script>
+
+
+
+
+
     </body>
 
 </html>

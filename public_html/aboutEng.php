@@ -67,45 +67,45 @@
             <!-- Header Section Begin -->
             <header class="header">
                 <div class="header__top">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="header__top__inner">
-                                <div class="header__top__left">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="header__top__inner">
                                     <div class="header__top__left">
-                                        <ul>
-                                            <li><a href="login.php"><?php include './nombre-usuarioEng.php'; ?></a> <span class="arrow_carrot-down"></span>
-                                                <ul>
-                                                    <div><a href="logout.php"><li>Log out</li></a></div>
-                                                </ul>
+                                        <div class="header__top__left">
+                                            <ul>
+                                                <li><a href="login.php"><?php include './nombre-usuarioEng.php'; ?></a> <span class="arrow_carrot-down"></span>
+                                                    <ul>
+                                                        <div><a href="logout.php"><li>Log out</li></a></div>
+                                                    </ul>
                                                 <li><a href="./about.php">Español</a></li>
-                                            </li>
-                                        </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="header__logo">
-                                    <a href="./index.php"><img src="img/logo.png" alt=""></a>
-                                </div>
-                                <div class="header__top__right">
-                                    <div class="header__top__right__links">
-                                        <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
-                                        <a href="#" ><img src="img/icon/heart.png" alt=""></a>
+                                    <div class="header__logo">
+                                        <a href="./index.php"><img src="img/logo.png" alt=""></a>
                                     </div>
-                                    <div class="header__top__right__cart">
-                                        <a href="#" data-toggle="modal" data-target="#exampleModal"><img src="img/icon/cart.png" alt="" > <?php
-                                            include ("./contadorCarrito.php");
-                                            ?></a>
-                                        <div class="cart__price">Cart: <?php
-                                            include ("./contadorPresio.php");
-                                            ?></div>
+                                    <div class="header__top__right">
+                                        <div class="header__top__right__links">
+                                            <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
+                                            <a href="#" ><img src="img/icon/heart.png" alt=""></a>
+                                        </div>
+                                        <div class="header__top__right__cart">
+                                            <a href="#" data-toggle="modal" data-target="#exampleModal"><img src="img/icon/cart.png" alt="" > <?php
+                                                include ("./contadorCarrito.php");
+                                                ?></a>
+                                            <div class="cart__price">Cart: <?php
+                                                include ("./contadorPresio.php");
+                                                ?></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
+                        <div class="canvas__open"><i class="fa fa-bars"></i></div>
                     </div>
-                    <div class="canvas__open"><i class="fa fa-bars"></i></div>
                 </div>
-            </div>
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
@@ -457,47 +457,82 @@
             </div>
         </footer>
         <!-- Footer Section End -->
-  <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Items in cart</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <!-- Tabla de agregar al carrito -->
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>Product</th>
-                                            <th>Price</th>
-                                            <th>Amount</th>
-                                        </tr>
-                                        <?php
-                                        include ("./mostrarCart.php");
-                                        ?>
-                                    </thead>
-                                </table>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Items in cart</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Tabla de agregar al carrito -->
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Product</th>
+                                                <th>Price</th>
+                                                <th>Amount</th>
+                                            </tr>
+                                            <?php
+                                            include ("./mostrarCart.php");
+                                            ?>
+                                        </thead>
+                                    </table>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <div class="cart_delete">
-                            <a href="./eliminarCarritoENG.php" class="btn btn-primary">Clean cart</a>
+                        <div class="modal-footer">
+
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="row">
+                                                            <div class="col-md-6 d-flex justify-content-center">
+
+                                                                <button type="button" class="btn btn-secondary center-block" data-dismiss="modal">Close</button>
+                                                            </div>
+                                                            <div class="col-md-6 d-flex justify-content-cente">
+
+                                                                <div class="cart_delete">
+                                                                    <a href="./eliminarPastel_1.php" class="btn btn-primary center-block">Clean cart</a>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <br><br><br>
+                                                        <div> 
+                                                            <div id="paypal-button-container"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <button type="button" class="btn btn-success">Pay</button>
+
+
+
+
+
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
         <!-- Js Plugins -->
@@ -514,6 +549,36 @@
         <script src="http://code.jquery.com/jquery-latest.js"></script>
         <script src="https://kit.fontawesome.com/bdc40e9dda.js" crossorigin="anonymous"></script>
         <script src="//code.tidio.co/g1tvhizsol7n37h46ewx14mqs1fy14tl.js" async></script>
+        <script src="https://www.paypal.com/sdk/js?client-id=AdzEdUHZ41GJGmqaaQEq6W12NepCvy1--2chuk-VyJcP-vlGzWXIzA1j31lEwTBRPtqw3hy7Dscl2IrT&currency=MXN"></script>
+        <script>
+                                    paypal.Buttons({
+                                        // Sets up the transaction when a payment button is clicked
+                                        createOrder: (data, actions) => {
+                                            return actions.order.create({
+                                                purchase_units: [{
+                                                        amount: {
+                                                            value: <?php echo $presio; ?>  // Can also reference a variable or function
+                                                        }
+                                                    }]
+                                            });
+                                        },
+                                        // Finalize the transaction after payer approval
+                                        onApprove: (data, actions) => {
+                                            return actions.order.capture().then(function (orderData) {
+                                                // Successful capture! For dev/demo purposes:
+                                                console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+                                                const transaction = orderData.purchase_units[0].payments.captures[0];
+                                                alert(`Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`);
+                                                // When ready to go live, remove the alert and show a success message within this page. For example:
+                                                // const element = document.getElementById('paypal-button-container');
+                                                // element.innerHTML = '<h3>Thank you for your payment!</h3>';
+                                                // Or go to another URL:  actions.redirect('thank_you.html');
+                                            });
+                                        }
+                                    }).render('#paypal-button-container');
+        </script>
+
+
 
     </body>
 

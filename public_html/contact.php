@@ -205,38 +205,22 @@
                     </div>
                     <div class="col-lg-8">
                         <div class="contact__form">
-                            <?php
-                            if (isset($_SESSION["email"])) {
-                                $correoV = $_SESSION["email"];
-                            } else {
-                                $correoV = "alguien@gmail.com";
-                                
-                            }
-                            ?>
                             <form action="comentarios.php" method="POST">
                                 <div class="row">
                                     <div class="col-lg-6">
-                                        <input type="text" placeholder="Nombre" name="txtnombre" required="" value="<?php echo $nombre; ?>" hidden="">
+                                        <input type="text" placeholder="Nombre" name="txtnombre" required="">
                                     </div>
-                                    
-                                    <div class="col-lg-12">
-                                        
+                                    <div class="col-lg-6">
                                         <select name="txtcalificacion" id="color" class="list">
-                                            
                                             <option value="1">1 Estrella</option>
                                             <option value="2">2 Estrellas</option>
                                             <option value="3">3 Estrellas</option>
                                             <option value="4">4 Estrellas</option>
                                             <option value="5">5 Estrellas</option>
-                                           
                                         </select>
                                     </div>
-                                    <br>
-                                    <br>
-                                    <br>
-                           
                                     <div class="col-lg-6" >
-                                        <input type="text" placeholder="Correo Electronico" name="txtcorreo" value="<?php echo $correoV; ?>" hidden="">
+                                        <input type="text" placeholder="Correo Electronico" name="txtcorreo" hidden="">
                                     </div>
                                     <div class="col-lg-12">
                                         <textarea placeholder="Mensaje" name="txtmensaje" required=""></textarea>
@@ -244,6 +228,7 @@
                                     </div>
                                 </div>
                             </form>
+
                         </div>
                     </div>
                 </div>
@@ -353,8 +338,8 @@
                                 </div>
                             </div>
                         </div>
-                        
-              <div class="modal-footer">
+
+                        <div class="modal-footer">
 
                             <div class="container-fluid">
                                 <div class="row">
@@ -407,8 +392,8 @@
         <script src="js/jquery.nicescroll.min.js"></script>
         <script src="js/main.js"></script>
         <script src="js/confirmacion_1.js"></script>
-        
-<script src="https://www.paypal.com/sdk/js?client-id=AdzEdUHZ41GJGmqaaQEq6W12NepCvy1--2chuk-VyJcP-vlGzWXIzA1j31lEwTBRPtqw3hy7Dscl2IrT&currency=MXN"></script>
+
+        <script src="https://www.paypal.com/sdk/js?client-id=AdzEdUHZ41GJGmqaaQEq6W12NepCvy1--2chuk-VyJcP-vlGzWXIzA1j31lEwTBRPtqw3hy7Dscl2IrT&currency=MXN"></script>
         <script>
                                     paypal.Buttons({
                                         // Sets up the transaction when a payment button is clicked

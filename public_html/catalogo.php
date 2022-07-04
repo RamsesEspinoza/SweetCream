@@ -182,17 +182,23 @@
                               </script>";
                     }
                     if ($inc) {
+                       $aja1 = "SELECT COUNT(pastel_id) FROM pastel_n";
+                        $pdo = mysqli_query($conn, $aja1);
+                        if ($pdo) {
+                            while ($rowi = $pdo->fetch_array()) {
+                                $aja2 = $rowi['COUNT(pastel_id)'];
+                            }
+                        }
                         $consulta = "SELECT * FROM pastel_n";
                         $resultado = mysqli_query($conn, $consulta);
                         if ($resultado) {
                             while ($row = $resultado->fetch_array()) {
                                 $articulos_x_pagina = 8;
-                                $aja = count($row, COUNT_NORMAL);
-                                $cantidad = $aja - 6;
-                                $smn = $cantidad / $articulos_x_pagina;
-                                $paginas = ceil($smn);
+                                $smn = $aja2 / $articulos_x_pagina;
+                                $paginas = ceil($smn);  
                             }
-                        }
+                        } 
+                        
                         if ($_GET['pagina'] > $paginas || $_GET['pagina'] <= 0) {
                             echo "<script>
                             window.location.href = './catalogo.php?pagina=1';

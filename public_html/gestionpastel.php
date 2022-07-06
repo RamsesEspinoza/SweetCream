@@ -291,7 +291,7 @@ $inc = include("./conexion/conexion.php");
 <script src="js/owl.carousel.min.js"></script>
 <script src="js/jquery.nicescroll.min.js"></script>
 <script src="js/main.js"></script>
-<!--<script src="js/confirmacion.js"></script>-->
+<script src="js/confirmacion.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>

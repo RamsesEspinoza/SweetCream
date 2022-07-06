@@ -20,7 +20,7 @@ $inc = include("./conexion/conexion.php");
         <meta name="keywords" content="Cake, unica, creative, html">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Cake | Template</title>
+        <title>Agregar pastel</title>
 
         <!-- Google Font -->
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
@@ -168,6 +168,7 @@ $inc = include("./conexion/conexion.php");
                                 <h4><?php
                                     if ($query) {
                                         echo 'Pastel agregado correctamente';
+                                        
                                     } else {
                                         echo 'error';
                                     }
@@ -310,6 +311,7 @@ $inc = include("./conexion/conexion.php");
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.nicescroll.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>

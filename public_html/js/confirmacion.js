@@ -1,12 +1,28 @@
 function confirmar(e){
-    if (confirm("¿Estas seguro que deseas eliminar este articulo?")){
-        return true;
-    }else{
+
+
+
+Swal.fire({
+  title: 'Are you sure?',
+  text: "You won't be able to revert this!",
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  confirmButtonText: 'Yes, delete it!'
+}).then((result) => {
+  if (result.isConfirmed) {
+    return true;
+    
+  }
+  else{
         e.preventDefault();
     }
-}
+})
+
 let linkDelete = document.querySelectorAll(".cart_add");
 
 for(var i = 0; i < linkDelete.length; i++){
     linkDelete[i].addEventListener('click', confirmar);
+}
 }

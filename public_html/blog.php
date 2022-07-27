@@ -37,7 +37,7 @@
             .botonComp{
                 background-color: gray;
                 color: white;
-                display: block
+                
             }
         </style>
 

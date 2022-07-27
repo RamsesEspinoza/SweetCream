@@ -72,74 +72,61 @@
     <!-- Offcanvas Menu End -->
 
     <!-- Header Section Begin -->
-    <header class="header">
-        <div class="header__top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="header__top__inner">
-                            <div class="header__top__left">
-                                <ul>
-                                    <li>USD <span class="arrow_carrot-down"></span>
+        <header class="header">
+            <div class="header__top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="header__top__inner">
+                                <div class="header__top__left">
+
+                                    <div class="header__top__left">
                                         <ul>
-                                            <li>EUR</li>
-                                            <li>USD</li>
+                                            <li><a href="./catalogoEng.php">English</a></li>
                                         </ul>
-                                    </li>
-                                    <li>ENG <span class="arrow_carrot-down"></span>
-                                        <ul>
-                                            <li>Spanish</li>
-                                            <li>ENG</li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Sign in</a> <span class="arrow_carrot-down"></span></li>
-                                </ul>
-                            </div>
-                            <div class="header__logo">
-                                <a href="./index.php"><img src="img/logo.png" alt=""></a>
-                            </div>
-                            <div class="header__top__right">
-                                <div class="header__top__right__links">
-                                    <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
-                                    <a href="#"><img src="img/icon/heart.png" alt=""></a>
+                                    </div>
+
+
                                 </div>
-                                <div class="header__top__right__cart">
-                                    <a href="#"><img src="img/icon/cart.png" alt=""> <span>0</span></a>
-                                    <div class="cart__price">Cart: <span>$0.00</span></div>
+                                <div class="header__logo">
+                                    <a href="./index.php"><img src="img/logo.png" alt=""></a>
+                                </div>
+                                <div class="header__top__right">
+                                    <div class="header__top__right__links">
+                                        <a href="#" class="search-switch"><img src="img/icon/search.png" alt=""></a>
+                                        <a href="#" ><img src="img/icon/heart.png" alt=""></a>
+                                    </div>
+                                    <div class="header__top__right__cart">
+                                        <a href="#" data-toggle="modal" data-target="#exampleModal"><img src="img/icon/cart.png" alt="" > <?php
+                                            include ("./contadorCarrito.php");
+                                            ?></a>
+                                        <div class="cart__price">Carrito: <?php
+                                            include ("./contadorPresio.php");
+                                            ?></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="canvas__open"><i class="fa fa-bars"></i></div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <nav class="header__menu mobile-menu">
-                        <ul>
-                            <li><a href="./index.php">Home</a></li>
-                            <li><a href="./about.html">About</a></li>
-                            <li class="active"><a href="./catalogo.php">Shop</a></li>
-                            <li><a href="#">Pages</a>
-                                <ul class="dropdown">
-                                    <li><a href="./shop-details.html">Shop Details</a></li>
-                                    <li><a href="./shoping-cart.html">Shoping Cart</a></li>
-                                    <li><a href="./checkout.html">Check Out</a></li>
-                                    <li><a href="./wisslist.html">Wisslist</a></li>
-                                    <li><a href="./Class.html">Class</a></li>
-                                    <li><a href="./blog-details.html">Blog Details</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="./blog.html">Blog</a></li>
-                            <li><a href="./contact.html">Contact</a></li>
-                        </ul>
-                    </nav>
+                    <div class="canvas__open"><i class="fa fa-bars"></i></div>
                 </div>
             </div>
-        </div>
-    </header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <nav class="header__menu mobile-menu">
+                            <ul>
+                                <li><a href="./index.php">Inicio</a></li>
+                                <li><a href="./about.php">Acerca de</a></li>
+                                <li class="active"><a href="./catalogo.php">Tienda</a></li>
+                                <li><a href="./blog.php">¡Crea tu propio pastel!</a></li>
+                                <li><a href="./contact.php">Contactanos</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
     <!-- Header Section End -->
 
     <!-- Breadcrumb Begin -->
@@ -148,7 +135,7 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="breadcrumb__text">
-                        <h2>Editar partel</h2>
+                        <h2>Editar pastel</h2>
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-6">
@@ -201,16 +188,16 @@
                                     <input type="text" class="form-control" id="idnombre" name="DescPastel" value="<?php echo $row["descripcion"];?>" required>
 				</div>
                                 <div class="form-group">
-					<label for="idnombre">
-						Imagen(representativo)
+                                    <label for="idnombre" hidden="">
+						Imagen
 					</label>
-                                    <input type="text" class="form-control" id="idnombre" name="ImgPastel" value="<?php echo $row["img_pastel"];?>" required>
+                                    <input type="text" class="form-control" id="idnombre" name="ImgPastel" value="<?php echo $row["img_pastel"];?>" required hidden="">
 				</div>
                             <?php }
     
                             } ?>
 				<button type="submit" class="btn btn-primary">
-					Agregar
+					Editar
 				</button>
 			</form>
                         </div>

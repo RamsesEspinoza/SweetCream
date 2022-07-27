@@ -41,12 +41,26 @@ $inc = include("./conexion/conexion.php");
     <link rel="stylesheet" href="css/style.css" type="text/css">
 </head>
 
-<body>
+<body onload="alerta()">
     <!-- Page Preloder -->
     <div id="preloder">
         <div class="loader"></div>
     </div>
-
+    <script>
+        function alerta(){
+            Swal.fire({
+                     position: 'center',
+                     icon: 'success',
+                     title: 'Actualizado con exito',
+                     showConfirmButton: true,
+                    }).then((result) => {
+        if (result.isConfirmed) {
+           
+            location.href = "./gestionPastel.php";
+        }
+    })
+        }
+    </script>
     <!-- Offcanvas Menu Begin -->
         <div class="offcanvas-menu-overlay"></div>
         <div class="offcanvas-menu-wrapper">
@@ -169,7 +183,7 @@ $inc = include("./conexion/conexion.php");
                     $inc = include("./conexion/conexion.php");
                     if (!$_GET) {
                         echo "<script>
-                            window.location.href = './gestionpastel.php?pagina=1';
+                            
                               </script>";
                     }
                     if ($inc) {
@@ -192,7 +206,7 @@ $inc = include("./conexion/conexion.php");
                         
                         if ($_GET['pagina'] > $paginas || $_GET['pagina'] <= 0) {
                             echo "<script>
-                            window.location.href = './gestionpastel.php?pagina=1';
+                            
                               </script>";
                         }
                         $iniciar = ($_GET['pagina'] - 1) * $articulos_x_pagina;
@@ -219,9 +233,9 @@ $inc = include("./conexion/conexion.php");
                                         $i < $paginas;
                                         $i++):
                                     ?>
-                                    <a href="gestionpastel.php?pagina=<?php echo $i + 1 ?>"><?php echo $i + 1 ?></a>
+                                    <a href="catalogo.php?pagina=<?php echo $i + 1 ?>"><?php echo $i + 1 ?></a>
                                 <?php endfor ?>
-                                <a href="gestionpastel.php?pagina=<?php echo$_GET['pagina'] + 1 ?>" ><span class="arrow_carrot-right"></span></a>
+                                <a href="catalogo.php?pagina=<?php echo$_GET['pagina'] + 1 ?>" ><span class="arrow_carrot-right"></span></a>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">

@@ -146,28 +146,15 @@
                     <div class="row">
                         <div class="col-lg-7 col-md-7">
                             <div class="shop__option__search">
-                                <form action="#">
-                                    <select>
-                                        <option value="">Categories</option>
-                                        <option value="">Red Velvet</option>
-                                        <option value="">Cup Cake</option>
-                                        <option value="">Biscuit</option>
-                                    </select>
-                                    <input type="text" placeholder="Search">
+                                <style>
+                                    .filtro{
+                                        display: none;
+                                    }
+                                </style>
+                                <form>
+                                    <input type="text" placeholder="Search" name="buscador" id="buscador">
                                     <button type="submit"><i class="fa fa-search"></i></button>
                                 </form>
-                            </div>
-                        </div>
-                        <div class="col-lg-5 col-md-5">
-                            <div class="shop__option__right">
-                                <select>
-                                    <option value="">Default sorting</option>
-                                    <option value="">A to Z</option>
-                                    <option value="">1 - 8</option>
-                                    <option value="">Name</option>
-                                </select>
-                                <a href="#"><i class="fa fa-list"></i></a>
-                                <a href="#"><i class="fa fa-reorder"></i></a>
                             </div>
                         </div>
                     </div>
@@ -182,7 +169,7 @@
                               </script>";
                     }
                     if ($inc) {
-                       $aja1 = "SELECT COUNT(pastel_id) FROM pastel_n";
+                        $aja1 = "SELECT COUNT(pastel_id) FROM pastel_n";
                         $pdo = mysqli_query($conn, $aja1);
                         if ($pdo) {
                             while ($rowi = $pdo->fetch_array()) {
@@ -195,10 +182,10 @@
                             while ($row = $resultado->fetch_array()) {
                                 $articulos_x_pagina = 8;
                                 $smn = $aja2 / $articulos_x_pagina;
-                                $paginas = ceil($smn);  
+                                $paginas = ceil($smn);
                             }
-                        } 
-                        
+                        }
+
                         if ($_GET['pagina'] > $paginas || $_GET['pagina'] <= 0) {
                             echo "<script>
                             window.location.href = './catalogo.php?pagina=1';
@@ -214,7 +201,8 @@
                                 $nombre = $row['nombre'];
                                 $precio = $row['precio'];
                                 ?>
-                                <div class="col-lg-3 col-md-6 col-sm-6">
+
+                                <div class="col-lg-3 col-md-6 col-sm-6 buscar">
                                     <div class="product__item">
                                         <div class="product__item__pic set-bg" data-setbg="<?php echo $row['img_pastel']; ?>">
                                             <div class="product__label">
@@ -278,7 +266,7 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="shop__last__text">
-                                <p>Showing 8 results of <?php echo $aja2; ?> results</p>
+                                <p>Mostrando 8 elementos de <?php echo $aja2; ?> </p>
                             </div>
                         </div>
                     </div>
@@ -334,7 +322,7 @@
                                                             <div class="col-md-6 d-flex justify-content-cente">
 
                                                                 <div class="cart_delete">
-                                                                    <a href="./eliminarPastel_1.php" class="btn btn-primary center-block">Vaciar carrito</a>
+                                                                    <a onclick="mostrar()" class="btn btn-primary center-block" style="color: white;">Vaciar carrito</a>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -359,72 +347,58 @@
             </div>
         </div>
 
-        <!-- Footer Section Begin -->
-        <footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="footer__widget">
-                            <h6>Horario</h6>
-                            <ul>
-                                <li>Lunes - Viernes: 08:00 am – 08:30 pm</li>
-                                <li>Sabado: 10:00 am – 16:30 pm</li>
-                                <li>Domingo: 10:00 am – 16:30 pm</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="footer__about">
-                            <div class="footer__logo">
-                                <a href="#"><img src="img/footer-logo.png" alt=""></a>
-                            </div>
-
-                            <div class="footer__social">
-                                <a href="https://www.facebook.com/Sweet-Cream-109388668488078"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-youtube-play"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="footer__newslatter">
-                            <h6>Entérate de nuestras Promociones</h6>
-                            <p>Recibe promociones exclusivas y noticias sobre lanzamientos de nuevos productos</p>
-                            <form action="#">
-                                <input type="text" placeholder="Correo Electronico">
-                                <button type="submit"><i class="fa fa-send-o"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
+       <!-- Footer Section Begin -->
+            <footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-7">
-                            <p class="copyright__text text-white"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | <a target="_blank">Universidad Tecnológica de Tecámac</a>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            </p>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="copyright__widget">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="footer__widget">
+                                <h6>Horario</h6>
                                 <ul>
-
+                                    <li>Lunes - Viernes: 08:00 am – 08:30 pm</li>
+                                    <li>Sabado: 10:00 am – 16:30 pm</li>
+                                    <li>Domingo: 10:00 am – 16:30 pm</li>
                                 </ul>
                             </div>
                         </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="footer__about">
+                                <div class="footer__logo">
+                                    <a href="#"><img src="img/footer-logo.png" alt=""></a>
+                                </div>
+
+                                <div class="footer__social">
+                                    <a href="https://www.facebook.com/Sweet-Cream-109388668488078"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </footer>
-        <!-- Footer Section End -->
-        
-        <?php
-            include ("./contadorPresio.php");
-        ?>
-        
+                <div class="copyright">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <p class="copyright__text text-white"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | <a target="_blank">Universidad Tecnológica de Tecámac</a>
+
+                                </p>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="copyright__widget">
+                                    <ul>
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- Footer Section End -->
 
         <!-- Search Begin -->
         <div class="search-model">
@@ -448,6 +422,8 @@
         <script src="js/jquery.nicescroll.min.js"></script>
         <script src="js/main.js"></script>
         <script src="js/confirmacion_1.js"></script>
+        <script src="js/search.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="https://www.paypal.com/sdk/js?client-id=AdzEdUHZ41GJGmqaaQEq6W12NepCvy1--2chuk-VyJcP-vlGzWXIzA1j31lEwTBRPtqw3hy7Dscl2IrT&currency=MXN"></script>
         <script>
                                     paypal.Buttons({

@@ -1,3 +1,4 @@
+
 <?php
 include './conexion/conexion.php';
 $id = $_POST["id"];
@@ -11,8 +12,7 @@ $query = "UPDATE pastel_n SET nombre='$nombre', precio='$precio', descripcion='$
  $result = mysqli_query($conn,$query) or die(mysqli_error());
  if($result){
      echo "<script>
-         alert('Se han actualizado los datos'); 
-         window.location.href = './gestionpastel.php';
+         window.location.href = './gestionpastel_1.php?pagina=1';
            </script>";
  }else{
      echo "<script>

@@ -1,12 +1,16 @@
-function confirmar(e){
-    if (confirm("¿Estas seguro que deseas eliminar tu carrito?")){
-        return true;
-    }else{
-        e.preventDefault();
-    }
-}
-let linkDelete = document.querySelectorAll(".cart_delete");
-
-for(var i = 0; i < linkDelete.length; i++){
-    linkDelete[i].addEventListener('click', confirmar);
+function mostrar() {
+    Swal.fire({
+        title: '¿Seguro qué deseas eliminar tu carrito?',
+        text: "No serás capaz de recuperarlo",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#00BB2B',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, borralo'
+    }).then((result) => {
+        if (result.isConfirmed) {
+           
+            location.href = "./eliminarPastel_1.php";
+        }
+    })
 }

@@ -1,12 +1,16 @@
-function confirmar(e){
-    if (confirm("¿Estas seguro que deseas eliminar a este usuario?")){
-        return true;
-    }else{
-        e.preventDefault();
-    }
-}
-let linkDelete = document.querySelectorAll(".btnEliminar");
-
-for(var i = 0; i < linkDelete.length; i++){
-    linkDelete[i].addEventListener('click', confirmar);
+function mostrar(id) {
+    Swal.fire({
+        title: '¿Seguro qué quieres eliminarlo?',
+        text: "No serás capaz de recuperarlo",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#00BB2B',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, borralo'
+    }).then((result) => {
+        if (result.isConfirmed) {
+           
+            location.href = "./eliminarUsu.php?id=" + id;
+        }
+    })
 }

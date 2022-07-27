@@ -1,4 +1,3 @@
-
 function mostrarnt(id) {
     const swalWithBootstrapButtons = Swal.mixin({
         customClass: {
@@ -10,7 +9,7 @@ function mostrarnt(id) {
 
     swalWithBootstrapButtons.fire({
         title: '¿Seguro qué quieres eliminarlo?',
-        text: "No serás capas de recuperarlo",
+        text: "No serás capaz de recuperarlo",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonText: 'borralo!',
@@ -37,7 +36,7 @@ function mostrarnt(id) {
 function mostrar(id) {
     Swal.fire({
         title: '¿Seguro qué quieres eliminarlo?',
-        text: "No serás capas de recuperarlo",
+        text: "No serás capaz de recuperarlo",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#00BB2B',

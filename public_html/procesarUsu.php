@@ -1,3 +1,6 @@
+<header>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</header>
 <?php
 include './conexion/conexion.php';
 $id = $_POST["id"];
@@ -11,8 +14,7 @@ $query = "UPDATE usuarios SET nombre='$nombre', email='$mail', password='$pass',
  $result = mysqli_query($conn,$query) or die(mysqli_error());
  if($result){
      echo "<script>
-         alert('Se han actualizado los datos'); 
-         window.location.href = './gestionUsu.php';
+           window.location.href = './gestionUsu_1.php';
            </script>";
  }else{
      echo "<script>

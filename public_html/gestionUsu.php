@@ -46,7 +46,6 @@ $inc = include("./conexion/conexion.php");
     <div id="preloder">
         <div class="loader"></div>
     </div>
-
     <!-- Offcanvas Menu Begin -->
         <div class="offcanvas-menu-overlay"></div>
         <div class="offcanvas-menu-wrapper">
@@ -130,13 +129,7 @@ $inc = include("./conexion/conexion.php");
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="breadcrumb__text">
-                        <h2>Gestion de Usuarios</h2>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-6">
-                    <div class="breadcrumb__links">
-                        <a href="./addpastel.php">Agregar</a>
-                        <span>Shop</span>
+                        <h2 onclick="listo()">Gestion de Usuarios</h2>
                     </div>
                 </div>
             </div>
@@ -151,28 +144,15 @@ $inc = include("./conexion/conexion.php");
                 <div class="row">
                     <div class="col-lg-7 col-md-7">
                         <div class="shop__option__search">
-                            <form action="#">
-                                <select>
-                                    <option value="">Categories</option>
-                                    <option value="">Red Velvet</option>
-                                    <option value="">Cup Cake</option>
-                                    <option value="">Biscuit</option>
-                                </select>
-                                <input type="text" placeholder="Search">
-                                <button type="submit"><i class="fa fa-search"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-lg-5 col-md-5">
-                        <div class="shop__option__right">
-                            <select>
-                                <option value="">Default sorting</option>
-                                <option value="">A to Z</option>
-                                <option value="">1 - 8</option>
-                                <option value="">Name</option>
-                            </select>
-                            <a href="#"><i class="fa fa-list"></i></a>
-                            <a href="#"><i class="fa fa-reorder"></i></a>
+                            <style>
+                                    .filtro{
+                                        display: none;
+                                    }
+                                </style>
+                                <form>
+                                <input type="text" placeholder="Search" name="buscador" id="buscador">
+                               <button type="submit"><i class="fa fa-search"></i></button>
+                                </form>
                         </div>
                     </div>
                 </div>
@@ -191,91 +171,126 @@ $inc = include("./conexion/conexion.php");
         ?>
                </table>
             </div>
-            <div class="shop__last__option">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="shop__pagination">
-                            <a href="#">1</a>
-                            <a href="#">2</a>
-                            <a href="#">3</a>
-                            <a href="#"><span class="arrow_carrot-right"></span></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="shop__last__text">
-                            <p>Showing 1-9 of 10 results</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Shop Section End -->
+            <?php
+                    $inc = include("./conexion/conexion.php");
+                    if (!$_GET) {
+                        echo "<script>
+                            window.location.href = './gestionUsu.php?pagina=1';
+                              </script>";
+                    }
+                    if ($inc) {
+                       $aja1 = "SELECT COUNT(id_usa) FROM usuarios";
+                        $pdo = mysqli_query($conn, $aja1);
+                        if ($pdo) {
+                            while ($rowi = $pdo->fetch_array()) {
+                                $aja2 = $rowi['COUNT(id_usa)'];
+                            }
+                        }
+                        $consulta = "SELECT * FROM usuarios";
+                        $resultado = mysqli_query($conn, $consulta);
+                        if ($resultado) {
+                            while ($row = $resultado->fetch_array()) {
+                                $articulos_x_pagina = 5;
+                                $smn = $aja2 / $articulos_x_pagina;
+                                $paginas = ceil($smn);  
+                            }
+                        } 
+                        
+                        if ($_GET['pagina'] > $paginas || $_GET['pagina'] <= 0) {
+                            echo "<script>
+                            window.location.href = './gestionUsu.php?pagina=1';
+                              </script>";
+                        }
+                        $iniciar = ($_GET['pagina'] - 1) * $articulos_x_pagina;
+                        $hey = strval($iniciar);
+                        $aja1 = "SELECT COUNT(id_usa) FROM usuarios";
+                        $pdo = mysqli_query($conn, $aja1);
+                        if ($pdo) {
+                            while ($rowi = $pdo->fetch_array()) {
+                                $aja2 = $rowi['COUNT(id_usa)'];
+                            }
+                        }
+                    }
+                    ?>
 
-    <!-- Footer Section Begin -->
-    <footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="footer__widget">
-                        <h6>WORKING HOURS</h6>
-                        <ul>
-                            <li>Monday - Friday: 08:00 am – 08:30 pm</li>
-                            <li>Saturday: 10:00 am – 16:30 pm</li>
-                            <li>Sunday: 10:00 am – 16:30 pm</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="footer__about">
-                        <div class="footer__logo">
-                            <a href="#"><img src="img/footer-logo.png" alt=""></a>
+
+          
+                <div class="shop__last__option">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="shop__pagination">
+                                <?php
+                                for ($i = 0;
+                                        $i < $paginas;
+                                        $i++):
+                                    ?>
+                                    <a href="gestionUsu.php?pagina=<?php echo $i + 1 ?>"><?php echo $i + 1 ?></a>
+                                <?php endfor ?>
+                                <a href="gestionUsu.php?pagina=<?php echo$_GET['pagina'] + 1 ?>" ><span class="arrow_carrot-right"></span></a>
+                            </div>
                         </div>
-                        <p>Lorem ipsum dolor amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore dolore magna aliqua.</p>
-                        <div class="footer__social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="shop__last__text">
+                                <p>Mostrando 5 elementos de <?php echo $aja2; ?> </p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 col-sm-6">
-                    <div class="footer__newslatter">
-                        <h6>Subscribe</h6>
-                        <p>Get latest updates and offers.</p>
-                        <form action="#">
-                            <input type="text" placeholder="Email">
-                            <button type="submit"><i class="fa fa-send-o"></i></button>
-                        </form>
+            </div>
+        </section>
+    <!-- Shop Section End -->
+<!-- Footer Section Begin -->
+            <footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="footer__widget">
+                                <h6>Horario</h6>
+                                <ul>
+                                    <li>Lunes - Viernes: 08:00 am – 08:30 pm</li>
+                                    <li>Sabado: 10:00 am – 16:30 pm</li>
+                                    <li>Domingo: 10:00 am – 16:30 pm</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="footer__about">
+                                <div class="footer__logo">
+                                    <a href="#"><img src="img/footer-logo.png" alt=""></a>
+                                </div>
+
+                                <div class="footer__social">
+                                    <a href="https://www.facebook.com/Sweet-Cream-109388668488078"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="copyright">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-7">
-                        <p class="copyright__text text-white"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                          Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                          <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                      </p>
-                  </div>
-                  <div class="col-lg-5">
-                    <div class="copyright__widget">
-                        <ul>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Terms & Conditions</a></li>
-                            <li><a href="#">Site Map</a></li>
-                        </ul>
+                <div class="copyright">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <p class="copyright__text text-white"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | <a target="_blank">Universidad Tecnológica de Tecámac</a>
+
+                                </p>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="copyright__widget">
+                                    <ul>
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</footer>
-<!-- Footer Section End -->
+            </footer>
+            <!-- Footer Section End -->
 
 <!-- Search Begin -->
 <div class="search-model">
@@ -299,6 +314,8 @@ $inc = include("./conexion/conexion.php");
 <script src="js/jquery.nicescroll.min.js"></script>
 <script src="js/main.js"></script>
 <script src="js/eliminarUsu.js"></script>
+<script src="js/search.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

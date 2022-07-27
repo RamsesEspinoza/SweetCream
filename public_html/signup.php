@@ -1,3 +1,6 @@
+<header>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</header>
 <?php
 $inc = include("./conexion/conexion.php");
 
@@ -18,8 +21,17 @@ try {
             }
         } else {
             echo "<script>
-         alert('¡Las claves no coiciden!');
-         window.history.go(-1);
+         Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: '¡Las contraseñas no coinciden!'
+          }).then((result) => {
+        if (result.isConfirmed) {
+           
+            window.history.go(-1);
+        }
+    })
+         
          </script>";
         }
     } 
@@ -96,7 +108,7 @@ try {
                 </div>
 
                 <button class="btn btn-block text-center my-3" type="submit" value="Registrarme">Registrarme</button>
-                <div class="text-center pt-3 text-muted"><span> O <br><a href="login.php">Inicia Sesion</a></span></div>
+                <div class="text-center pt-3 text-muted"><span> O <br><a href="login.php">Inicia Sesión</a></span></div>
 
 
             </form>

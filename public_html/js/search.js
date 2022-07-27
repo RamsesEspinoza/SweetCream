@@ -1,12 +1,13 @@
-var buscador = $("#table").DataTable();
+document.addEventListener("keyup", e => {
 
-$("#input-search").keyup(function(){
-    
-    buscador.search($(this).val()).draw();
-    
-    if ($("#input-search").val() == ""){
-        $(".content-search").fadeOut(300);
-    }else{
-        $(".content-search").fadeIn(300);
+    if (e.target.matches("#buscador")) {
+
+        document.querySelectorAll(".buscar").forEach(pastel => {
+            pastel.textContent.toLowerCase().includes(e.target.value.toLowerCase())
+                    ? pastel.classList.remove("filtro")
+                    : pastel.classList.add("filtro")
+        })
+
     }
+
 })

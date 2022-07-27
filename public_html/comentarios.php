@@ -1,3 +1,6 @@
+<header>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</header>
 <?php
 session_start();
 $inc = include("./conexion/conexion.php");
@@ -10,8 +13,16 @@ if (isset($_SESSION["email"])) {
         $result = mysqli_query($conn, $query) or die(mysqli_error());
         if ($result) {
             echo "<script>
-         alert('Gracias por tus Comentarios');
-         window.location.href = './index.php';
+        Swal.fire({
+            icon: 'success',
+            title: 'Listo',
+            text: '¡Gracias por tus comentarios!'
+          }).then((result) => {
+        if (result.isConfirmed) {
+           
+            window.location.href = './index.php';
+        }
+    })
          </script>";
         }
     }

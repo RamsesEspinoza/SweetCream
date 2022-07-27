@@ -24,12 +24,12 @@ if ($inc) {
                     border-bottom: 2px solid red;
                 }
             </style>
-            <tr>
+            <tr class="buscar">
                 <td><?php echo $row['nombre'] ?></td>
                 <td><?php echo $row['email'] ?></td>
                 <td><?php echo $row['tipo_usuario'] ?></td>
                 <td><a href="./editarUsu.php?id=<?php echo $row['id_usa']?>"><button class="btnEditar">Editar</button></a></td>
-                <td><a href="./eliminarUsu.php?id=<?php echo $row['id_usa']?>"><button class="btnEliminar">Eliminar</button></a></td>
+                <td><a href="#" onclick="mostrar('<?php echo $row['id_usa']?>')"><button class="btnEliminar">Eliminar</button></a></td>
                 
             </tr>
             <?php

@@ -1,3 +1,6 @@
+<header>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</header>
 <?php
 session_start();
 $inc = include("./conexion/conexion.php");
@@ -35,27 +38,63 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         header("location: index.php");
                     } else {
                         echo "<script>
-                            alert('Contraseña Incorrecta!!!');
-                            window.location.href='./login.php';
+                           Swal.fire({
+            icon: 'warning',
+            title: 'Oops...',
+            text: '¡Contraseña incorrecta!'
+          }).then((result) => {
+        if (result.isConfirmed) {
+           
+            window.history.go(-1);
+        }
+    })
+         
                             </script>";
                     }
                 }
             } else {
                 echo "<script>
-                        alert('Correo No Encontrado!!!');
-                        window.location.href='./login.php';
+                        Swal.fire({
+            icon: 'warning',
+            title: 'Oops...',
+            text: '¡Correo invalido!'
+          }).then((result) => {
+        if (result.isConfirmed) {
+           
+            window.history.go(-1);
+        }
+    })
+         
                         </script>";
             }
         } else {
             echo "<script>
-                        alert('Contraseña Incorrecta!!!');
-                        window.location.href='./login.php';
+                        Swal.fire({
+            icon: 'warning',
+            title: 'Oops...',
+            text: '¡Contraseña incorrecta!'
+          }).then((result) => {
+        if (result.isConfirmed) {
+           
+            window.history.go(-1);
+        }
+    })
+         
                         </script>";
         }
     } else {
         echo "<script>
-                        alert('Ingresa un Correo o una Contraseña Valida!!!');
-                        window.location.href='./login.php';
+                        Swal.fire({
+            icon: 'warning',
+            title: 'Oops...',
+            text: '¡Ingresa un correo valido!'
+          }).then((result) => {
+        if (result.isConfirmed) {
+           
+            window.history.go(-1);
+        }
+    })
+         
                         </script>";
     }
 }

@@ -2,7 +2,9 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </header>
 <?php
+include './SED.php';
 $inc = include("./conexion/conexion.php");
+$claveE = SED::encryption($_POST["password"]);
 
 try {
     if (!empty($_POST['email']) && !empty($_POST['password'])) {
@@ -11,7 +13,7 @@ try {
             $sql = "INSERT INTO usuarios (email, password,nombre) VALUES (?, ?, ?)";
             $stmt = mysqli_prepare($conn, $sql);
             //$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-            mysqli_stmt_bind_param($stmt, "sss", $_POST['email'], $_POST['password'], $_POST['nombre']);
+            mysqli_stmt_bind_param($stmt, "sss", $_POST['email'], $claveE, $_POST['nombre']);
 
             if (mysqli_stmt_execute($stmt)) {
 

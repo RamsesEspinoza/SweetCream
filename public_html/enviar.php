@@ -1,5 +1,6 @@
 <?php
 
+include './SED.php';
 $inc = include("./conexion/conexion.php");
 $correo = $_POST['email'];
 $consulta = "SELECT * FROM usuarios WHERE email='$correo'";
@@ -7,10 +8,11 @@ $resultado = mysqli_query($conn, $consulta);
 if($resultado){
     while ($row = $resultado->fetch_array()) {
         $pass = $row['password'];
+        $claveE = SED::decryption($pass);
     }
     $paracorreo = $correo;
     $titulo = "Recuperación de contraseña";
-    $mensaje = "Tu contraseña es: " .$pass;
+    $mensaje = "Tu contraseña es: " .$claveE;
     $tuccoreo = "From: SweetCream16@outlook.es";
     
     mail($paracorreo, $titulo, $mensaje, $tuccoreo);

@@ -1,28 +1,47 @@
+<header>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</header>
 <?php
+include './SED.php';
 $inc = include("./conexion/conexion.php");
 $correo = $_POST['email'];
 $consulta = "SELECT * FROM usuarios WHERE email='$correo'";
+
 $resultado = mysqli_query($conn, $consulta);
 
 $consulta = $resultado->fetch_array();
 if (!empty($consulta)) {
+    $claveE = SED::decryption($consulta['password']);
     $paracorreo = $correo;
     $titulo = "Recuperación de contraseña";
-    $mensaje = "Tu contraseña es: " . $consulta['password'];
+    $mensaje = "Tu contraseña es: " . $claveE;
     $tuccoreo = "From: SweetCream16@outlook.es";
     echo "<script>
-        alert('El correo electronico fue enviado on exito');
-        window.history.go(-1);
+        Swal.fire({
+            icon: 'success',
+            title: '¡Correo enviado!',
+            text: '¡Verifica tu contraseña en tu correo!'
+          }).then((result) => {
+        if (result.isConfirmed) {
+            location.href = './login.php';
+        }
+    })
         </script>";
     mail($paracorreo, $titulo, $mensaje, $tuccoreo);
 }else {
     echo "<script>
-        alert('El correo electronico no existe');
-        window.history.go(-1);
+        Swal.fire({
+            icon: 'error',
+            title: '¡El correo no existe!',
+            text: '¡Verifica tu correo e intentalo de nuevo!'
+          }).then((result) => {
+        if (result.isConfirmed) {
+            window.history.go(-1);
+        }
+    })
         </script>";
 }
 ?>
-
 
 <!doctype html>
 <html>

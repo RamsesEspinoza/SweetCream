@@ -2,7 +2,9 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </header>
 <?php
+include './SED.php';
 $inc = include("./conexion/conexion.php");
+$claveE = SED::encryption($_POST["password"]);
 
 try {
     if (!empty($_POST['email']) && !empty($_POST['password'])) {
@@ -11,7 +13,7 @@ try {
             $sql = "INSERT INTO usuarios (email, password,nombre) VALUES (?, ?, ?)";
             $stmt = mysqli_prepare($conn, $sql);
             //$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-            mysqli_stmt_bind_param($stmt, "sss", $_POST['email'], $_POST['password'], $_POST['nombre']);
+            mysqli_stmt_bind_param($stmt, "sss", $_POST['email'], $claveE, $_POST['nombre']);
 
             if (mysqli_stmt_execute($stmt)) {
 
@@ -68,21 +70,23 @@ try {
                 <div class="form-group py-2">
                     <div class="input-field"> 
                         <span class="far fa-user p-2"></span> 
-                        <input type="text" name="nombre" required="" placeholder="Ingresa tu Nombre">
+                        <input type="text" name="nombre" required="" required pattern="[A-Za-z0-9]{5,40}"
+                               title="Letras y números. Tamaño mínimo: 5. Tamaño máximo: 40" placeholder="Ingresa tu Nombre">
 
                     </div>
                 </div>
                 <div class="form-group py-2">
                     <div class="input-field"> 
                         <span class="far fa-address-card p-2"></span> 
-                        <input type="text" name="email" required="" placeholder="Ingresa tu correo electrónico">
+                        <input type="text" name="email" pattern="^[a-zA-Z0-9.!#$%&’+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$" required=""  placeholder="Ingresa tu correo electrónico">
                     </div>
                 </div>
                 <div class="form-group py-2">
                     <div class="input-field"> 
                         <span class="far fa-eye p-2"></span> 
-                        <input type="password" name="password" required="" placeholder="Ingresa tu contraseña">
+                        <input type="password" name="password" pattern="[A-Za-z0-9!?-]{8,12}" required="" title="Debe contener letras mayúsculas, minúsculas, números y los caracteres !?-. Su tamaño: entre 8 y 12 caracteres."  placeholder="Ingresa tu contraseña">
                     </div>
+
                 </div>
                 <div class="form-group py-2">
                     <div class="input-field"> 
@@ -108,7 +112,7 @@ try {
                 </div>
 
                 <button class="btn btn-block text-center my-3" type="submit" value="Registrarme">Registrarme</button>
-                <div class="text-center pt-3 text-muted"><span> O <br><a href="login.php">Inicia Sesión</a></span></div>
+                <div class="text-center pt-3 text-muted"><span> O <br><a href="login.php">Inicia Sesion</a></span></div>
 
 
             </form>

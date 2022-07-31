@@ -168,9 +168,9 @@
                             <div class="about__text">
                                 <div class="section-title">
                                     <span>Sobre nuestra pasteleria</span>
-                                    <h2>Lo mejor de nosotrros para tus mejores momentos</h2>
+                                    <h2>Lo mejor de nosotros para tus mejores momentos</h2>
                                 </div>
-                                <p>Apesar de que nuestro negocio pueda considerarse una micro empresa eso no signifa falta de experencia, contando con mas de 5 años en le mercado y con muchas sonrrisas repartidas puedes contar con nosotros si necesitas algun servicio</p>
+                                <p>A pesar de que nuestro negocio pueda considerarse una micro empresa eso no sígnica falta de experiencia, contando con más de 5 años en el mercado y con muchas sonrisas repartidas puedes contar con nosotros si necesitas algún servicio</p>
                             </div>
                         </div>
                         <div class="col-lg-6 col-md-6">
@@ -235,8 +235,8 @@
 
                                 </div>
                                 <div class="blog__item__text">
-                                    <h2>Comienzos</h2>
-                                    <p>Es común escuchar a los docentes decir en sus conversaciones cotidianas: “ahora todo es copiar y pegar”, “Internet no deja pensar”, “los jóvenes ya no saben lo que es un libro”, “le puse cero en el trabajo por plagio”, entre otras frases relacionadas con el popular “copiar y pegar” que actualmente domina las instituciones educativas, en especial las de educación superior, teniendo en cuenta que en ellas la exigencia de trabajos escritos es constante. Ya sea un resumen, un ensayo o un proyecto de investigación, Internet se ha convertido en la panacea del estudiante moderno para salir bien librado de todo texto que le sea solicitado. Muy remotas quedaron ya aquellas tardes completas en la biblioteca, luchas por obtener el único ejemplar de algún libro, o los rimeros de fotocopias, piensan algunos profesores con nostalgia.</p>
+                                    <h2>Misión</h2>
+                                    <p>Crear productos con excelencia, limpieza e innovación en el campo de la repostería adaptándonos a las necesidades para la satisfacción del cliente creando momentos inigualables al igual que nuestros productos.</p>
 
                                 </div>
                             </div>
@@ -246,8 +246,8 @@
 
                                 </div>
                                 <div class="blog__item__text">
-                                    <h2>Inspiración y motivaciones</h2>
-                                    <p>Es común escuchar a los docentes decir en sus conversaciones cotidianas: “ahora todo es copiar y pegar”, “Internet no deja pensar”, “los jóvenes ya no saben lo que es un libro”, “le puse cero en el trabajo por plagio”, entre otras frases relacionadas con el popular “copiar y pegar” que actualmente domina las instituciones educativas, en especial las de educación superior, teniendo en cuenta que en ellas la exigencia de trabajos escritos es constante. Ya sea un resumen, un ensayo o un proyecto de investigación, Internet se ha convertido en la panacea del estudiante moderno para salir bien librado de todo texto que le sea solicitado. Muy remotas quedaron ya aquellas tardes completas en la biblioteca, luchas por obtener el único ejemplar de algún libro, o los rimeros de fotocopias, piensan algunos profesores con nostalgia.</p>
+                                    <h2>Visión</h2>
+                                    <p>Que nuestra marca sea reconocida a nivel local y al rededor gracias a nuestro trabajo conformado por excelencia, creatividad y buen trato a nuestros clientes, llegando así a generar valor no solo material sino emocional en nuestros clientes.</p>
 
                                 </div>
                             </div>
@@ -257,8 +257,8 @@
 
                                 </div>
                                 <div class="blog__item__text">
-                                    <h2>Principios y valores</h2>
-                                    <p>Es común escuchar a los docentes decir en sus conversaciones cotidianas: “ahora todo es copiar y pegar”, “Internet no deja pensar”, “los jóvenes ya no saben lo que es un libro”, “le puse cero en el trabajo por plagio”, entre otras frases relacionadas con el popular “copiar y pegar” que actualmente domina las instituciones educativas, en especial las de educación superior, teniendo en cuenta que en ellas la exigencia de trabajos escritos es constante. Ya sea un resumen, un ensayo o un proyecto de investigación, Internet se ha convertido en la panacea del estudiante moderno para salir bien librado de todo texto que le sea solicitado. Muy remotas quedaron ya aquellas tardes completas en la biblioteca, luchas por obtener el único ejemplar de algún libro, o los rimeros de fotocopias, piensan algunos profesores con nostalgia.</p>
+                                    <h2>Historia</h2>
+                                    <p>Sweet cream tiene sus orígenes en un pueblo llamado Amanalco ubicado en el Estado de México, pueblo donde a través del conocimiento familiar transmitido a uno de sus fundadores la señora Alma Lilia Bravo Basurto en el año 2001 se crea una pequeña repostería que fue ganando impacto en el negocio local por sus productos y buen trato al cliente, lo que desencadeno en un nicho de clientes el cual era cada vez más grande y fiel a la marca en ese entonces aun ausente.</p>
 
                                 </div>
                             </div>
@@ -268,8 +268,8 @@
 
                                 </div>
                                 <div class="blog__item__text">
-                                    <h2>Visión a futuro</h2>
-                                    <p>Es común escuchar a los docentes decir en sus conversaciones cotidianas: “ahora todo es copiar y pegar”, “Internet no deja pensar”, “los jóvenes ya no saben lo que es un libro”, “le puse cero en el trabajo por plagio”, entre otras frases relacionadas con el popular “copiar y pegar” que actualmente domina las instituciones educativas, en especial las de educación superior, teniendo en cuenta que en ellas la exigencia de trabajos escritos es constante. Ya sea un resumen, un ensayo o un proyecto de investigación, Internet se ha convertido en la panacea del estudiante moderno para salir bien librado de todo texto que le sea solicitado. Muy remotas quedaron ya aquellas tardes completas en la biblioteca, luchas por obtener el único ejemplar de algún libro, o los rimeros de fotocopias, piensan algunos profesores con nostalgia.</p>
+                                    <h2>Retorno</h2>
+                                    <p>Sin embargo, por problemas de salud y por lo consiguiente económicos se tuvo que cerrar en el año 2007 la primera repostería, pero esto no paro el entusiasmo y dedicación a nuestros productos es así que en el año 2016 se da origen a un nuevo comercio en la venta de productos de repostería. Ahora con su segundo fundador el señor Carlos Moises Alvarez Bravo con el cual se abre el panorama a nuevos sabores en nuestros productos para generar una diversidad en nuestros productos llamando así la atención de nuevos clientes ahora en la localidad de Zumpango Estado de México generando de nuevo un pequeño pero fiel nicho de clientes el cual destaca nuestra marca no solo por su inigualable sabor sino por la creación de lazos estrechos , generando así momentos inigualables con nuestros productos.  “productos que endulzan más que el paladar, endulzando la vida”</p>
 
                                 </div>
                             </div>
@@ -490,24 +490,30 @@
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="https://www.paypal.com/sdk/js?client-id=AdzEdUHZ41GJGmqaaQEq6W12NepCvy1--2chuk-VyJcP-vlGzWXIzA1j31lEwTBRPtqw3hy7Dscl2IrT&currency=MXN"></script>
         <script>
-                                    paypal.Buttons({
-                                        // Sets up the transaction when a payment button is clicked
-                                        createOrder: (data, actions) => {
-                                            return actions.order.create({
-                                                purchase_units: [{
-                                                        amount: {
-                                                            value: <?php echo $presio; ?>  // Can also reference a variable or function
-                                                        }
-                                                    }]
-                                            });
-                                        },
-                                        // Finalize the transaction after payer approval
-                                        onApprove: (data, actions) => {
-                                            return actions.order.capture().then(function (orderData) {
-                                                // Successful capture! For dev/demo purposes:
-                                                console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
-                                                const transaction = orderData.purchase_units[0].payments.captures[0];
-                                                Swal.fire({
+                                        paypal.Buttons({
+                                            // Sets up the transaction when a payment button is clicked
+                                            createOrder: (data, actions) => {
+                                                return actions.order.create({
+                                                    purchase_units: [{
+                                                            amount: {
+                                                                value: <?php echo $presio; ?>  // Can also reference a variable or function
+                                                            }
+                                                        }]
+                                                });
+                                            },
+                                            // Finalize the transaction after payer approval
+                                            onApprove: (data, actions) => {
+                                                return actions.order.capture().then(function (orderData) {
+                                                    // Successful capture! For dev/demo purposes:
+                                                    console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+                                                    const transaction = orderData.purchase_units[0].payments.captures[0];
+                                                    //alert(`Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`);
+                                                    // When ready to go live, remove the alert and show a success message within this page. For example:
+                                                    // const element = document.getElementById('paypal-button-container');
+                                                    // element.innerHTML = '<h3>Thank you for your payment!</h3>';
+                                                    // Or go to another URL:  actions.redirect('thank_you.html');
+                                                    
+                                                    Swal.fire({
                                                         position: 'center',
                                                         icon: 'success',
                                                         title: 'Pagado con éxito!',
@@ -515,12 +521,12 @@
                                                     }).then((result) => {
                                                         if (result.isConfirmed) {
 
-                                                            location.href = "./eliminarPastel_1.php";
+                                                            location.href = "./generarPedido.php";
                                                         }
                                                     })
-                                            });
-                                        }
-                                    }).render('#paypal-button-container');
+                                                });
+                                            }
+                                        }).render('#paypal-button-container');
         </script>
 
 

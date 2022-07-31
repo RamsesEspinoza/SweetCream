@@ -37,7 +37,7 @@
             .botonComp{
                 background-color: gray;
                 color: white;
-                
+
             }
         </style>
 
@@ -136,45 +136,28 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="row" >
-
                         <h3 class="text-center" style="padding-top: 25px; padding-bottom: 30px" >
                             Presiona sobre la base o capa para cambiarlos
                         </h3>
-
-
-
                         <div class="col-md-9">
-
-
                             <div class="pasteles">
-
-
                                 <div class="border m-4 position-relative " style="height: 100%; width: 90%; left: 5%; z-index: 0">
-
                                     <div class="carousel slide position-absolute top-50 start-50 translate-middle w-100" id="carousel-279847" style="z-index: 1;">
-
                                         <div class="carousel-inner">
                                             <div class="carousel-item active">
                                                 <img class="d-block w-100" alt="Carousel Bootstrap First" src="img/crearPastel/img_tapa1.png" />
-
                                             </div>
                                             <div class="carousel-item">
                                                 <img class="d-block w-100" alt="Carousel Bootstrap Second" src="img/crearPastel/img_tapa2.png" />
-
                                             </div>
                                             <div class="carousel-item">
                                                 <img class="d-block w-100" alt="Carousel Bootstrap Third" src="img/crearPastel/img_tapa3.png" />
-
                                             </div>
                                             <div class="carousel-item">
                                                 <img class="d-block w-100" alt="Carousel Bootstrap Second" src="img/crearPastel/img_tapa4.png" />
-
                                             </div>
                                         </div> <a class="carousel-control-prev" href="#carousel-279847" data-slide="prev" style=" max-height:25%; margin-top:0%; left: -10%" data-bs-interval="false" data-interval="false"><span class="carousel-control-prev-icon "></span> <span class="sr-only">Previous</span></a> <a class="carousel-control-next" href="#carousel-279847" data-slide="next" style="max-height:25%; margin-top:0%; right: -10%;" data-bs-interval="false" data-interval="false"><span class="carousel-control-next-icon"></span> <span class="sr-only">Next</span></a>
                                     </div>
-
-
-
                                     <div class="carousel slide position-absolute top-50 start-50 translate-middle w-100" id="carousel-40513">
                                         <ol class="carousel-indicators">
                                             <li data-slide-to="0" data-target="#carousel-40513" class="active">
@@ -187,65 +170,39 @@
                                         <div class="carousel-inner">
                                             <div class="carousel-item active">
                                                 <img class="d-block w-100" alt="Carousel Bootstrap First" src="img/crearPastel/img_base.png" />
-
                                             </div>
                                             <div class="carousel-item">
                                                 <img class="d-block w-100" alt="Carousel Bootstrap Second" src="img/crearPastel/img_base2.png" />
-
                                             </div>
                                             <div class="carousel-item">
                                                 <img class="d-block w-100" alt="Carousel Bootstrap Third" src="img/crearPastel/img_base3.png" />
-
                                             </div>
                                             <div class="carousel-item">
                                                 <img class="d-block w-100" alt="Carousel Bootstrap Second" src="img/crearPastel/img_base4.png" />
-
                                             </div>
                                             <div class="carousel-item">
                                                 <img class="d-block w-100" alt="Carousel Bootstrap Third" src="img/crearPastel/img_base5.png" />
-
                                             </div>
                                             <div class="carousel-item">
                                                 <img class="d-block w-100" alt="Carousel Bootstrap Third" src="img/crearPastel/img_base6.png" />
-
                                             </div>
-
                                         </div > <a class="carousel-control-prev " href="#carousel-40513" data-slide="prev" data-bs-interval="false" data-interval="false" style="top: 50%; max-height:25%; margin-top:0%; left: -10%;"><span class="carousel-control-prev-icon"></span> <span class="sr-only">Previous</span></a> <a class="carousel-control-next" href="#carousel-40513" data-slide="next" style="top: 50%;  max-height:25%; margin-top:0%; right: -10%;" data-bs-interval="false" data-interval="false"><span class="carousel-control-next-icon"></span> <span class="sr-only">Next</span></a>
                                     </div>
-
-
-
-
-
-
                                     <img class="position-absolute top-50 start-50 translate-middle w-100" src="img/crearPastel/comp.png" id="fresas" style="z-index: 2; visibility: hidden"/>
                                     <img class="position-absolute top-50 start-50 translate-middle w-100" src="img/crearPastel/comp2.png" id="fram" style="z-index: 2; visibility: hidden"/>
                                     <img class="position-absolute top-50 start-50 translate-middle w-100" src="img/crearPastel/comp3.png" id="uvas" style="z-index: 2; visibility: hidden"/>
-
-
-
-
-
-
-
-
                                 </div>
                             </div>
                         </div>
-
                         <div class="col-md-3" style="min-height: 700px">
                             <h3 class="text-center">
                                 Complementos
-
                             </h3>
                             <br>
                             <!-- Complementos y añadidos -->
-
                             <div class="row">
-
                                 <div class="col-md-12">
                                     <div class="container">
-
                                         <div class="row align-items-start">
                                             <div class="col">
                                                 <div class="switch">
@@ -266,14 +223,10 @@
 
 
                             </div>
-
                             <br><!-- comment -->
-
                             <div class="row">
-
                                 <div class="col-md-12 ">
                                     <div class="container">
-
                                         <div class="row align-items-start">
                                             <div class="col">
                                                 <div class="switch">
@@ -286,21 +239,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!--
-                                                               <button type="button" class="btn btn-lg btn-outline-warning active" id="btnfresas" onclick="mostrarFresas(this)"   value="Ocultar">
-                                                               Fresas
-                                                               </button>
-                                -->
-
-
                             </div>
                             <br>
-
                             <div class="row">
-
                                 <div class="col-md-12">
                                     <div class="container">
-
                                         <div class="row align-items-start">
                                             <div class="col">
                                                 <div class="switch">
@@ -313,13 +256,26 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!--
-                                                               <button type="button" class="btn btn-lg btn-outline-warning active" id="btnfresas" onclick="mostrarFresas(this)"   value="Ocultar">
-                                                               Fresas
-                                                               </button>
-                                -->
-
-
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="container">
+                                        <div class="row align-items-start">
+                                            <div class="col">
+                                                <style>
+                                                    .btnAdd {
+                                                        background-color: transparent;
+                                                        border: none;
+                                                        font-weight:  bolder;
+                                                        border-bottom: 2px solid orange;
+                                                    }
+                                                </style>
+                                                <label class="form-check-label h2 "><a class="btnAdd" onclick="addcart()">Agregar al carrito </a></label>
+                                            </div>     
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -522,37 +478,37 @@
         </div>
         <!-- Search End -->
 
-<!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Articulos en carrito</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <!-- Tabla de agregar al carrito -->
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>Producto</th>
-                                            <th>Precio</th>
-                                            <th>Cantidad</th>
-                                        </tr>
-                                        <?php
-                                        include ("./mostrarCart.php");
-                                        ?>
-                                    </thead>
-                                </table>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Articulos en carrito</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Tabla de agregar al carrito -->
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Producto</th>
+                                                <th>Precio</th>
+                                                <th>Cantidad</th>
+                                            </tr>
+                                            <?php
+                                            include ("./mostrarCart.php");
+                                            ?>
+                                        </thead>
+                                    </table>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                     <div class="modal-footer">
+                        <div class="modal-footer">
 
                             <div class="container-fluid">
                                 <div class="row">
@@ -569,7 +525,7 @@
                                                             <div class="col-md-6 d-flex justify-content-cente">
 
                                                                 <div class="cart_delete">
-                                                                    <a href="./eliminarPastel_1.php" class="btn btn-primary center-block">Vaciar carrito</a>
+                                                                    <a onclick="mostrar()" class="btn btn-primary center-block" style="color: white;">Vaciar carrito</a>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -589,10 +545,10 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
         <!-- Js Plugins -->
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>
@@ -606,33 +562,46 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
         <script src="js/mostar.js"></script>
         <script src="js/confirmacion_1.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="https://www.paypal.com/sdk/js?client-id=AdzEdUHZ41GJGmqaaQEq6W12NepCvy1--2chuk-VyJcP-vlGzWXIzA1j31lEwTBRPtqw3hy7Dscl2IrT&currency=MXN"></script>
         <script>
-                                    paypal.Buttons({
-                                        // Sets up the transaction when a payment button is clicked
-                                        createOrder: (data, actions) => {
-                                            return actions.order.create({
-                                                purchase_units: [{
-                                                        amount: {
-                                                            value: <?php echo $presio; ?>  // Can also reference a variable or function
-                                                        }
-                                                    }]
-                                            });
-                                        },
-                                        // Finalize the transaction after payer approval
-                                        onApprove: (data, actions) => {
-                                            return actions.order.capture().then(function (orderData) {
-                                                // Successful capture! For dev/demo purposes:
-                                                console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
-                                                const transaction = orderData.purchase_units[0].payments.captures[0];
-                                                alert(`Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`);
-                                                // When ready to go live, remove the alert and show a success message within this page. For example:
-                                                // const element = document.getElementById('paypal-button-container');
-                                                // element.innerHTML = '<h3>Thank you for your payment!</h3>';
-                                                // Or go to another URL:  actions.redirect('thank_you.html');
-                                            });
-                                        }
-                                    }).render('#paypal-button-container');
+                                                                        paypal.Buttons({
+                                                                            // Sets up the transaction when a payment button is clicked
+                                                                            createOrder: (data, actions) => {
+                                                                                return actions.order.create({
+                                                                                    purchase_units: [{
+                                                                                            amount: {
+                                                                                                value: <?php echo $presio; ?>  // Can also reference a variable or function
+                                                                                            }
+                                                                                        }]
+                                                                                });
+                                                                            },
+                                                                            // Finalize the transaction after payer approval
+                                                                            onApprove: (data, actions) => {
+                                                                                return actions.order.capture().then(function (orderData) {
+                                                                                    // Successful capture! For dev/demo purposes:
+                                                                                    console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+                                                                                    const transaction = orderData.purchase_units[0].payments.captures[0];
+                                                                                    //alert(`Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`);
+                                                                                    // When ready to go live, remove the alert and show a success message within this page. For example:
+                                                                                    // const element = document.getElementById('paypal-button-container');
+                                                                                    // element.innerHTML = '<h3>Thank you for your payment!</h3>';
+                                                                                    // Or go to another URL:  actions.redirect('thank_you.html');
+
+                                                                                    Swal.fire({
+                                                                                        position: 'center',
+                                                                                        icon: 'success',
+                                                                                        title: 'Pagado con éxito!',
+                                                                                        showConfirmButton: true,
+                                                                                    }).then((result) => {
+                                                                                        if (result.isConfirmed) {
+
+                                                                                            location.href = "./generarPedido.php";
+                                                                                        }
+                                                                                    })
+                                                                                });
+                                                                            }
+                                                                        }).render('#paypal-button-container');
         </script>
 
     </body>

@@ -10,11 +10,9 @@ if (isset($_SESSION["email"])) {
             $tipo = intval($nombre);
             if ($tipo == 2) {
                 ?>
-                <a href="./gestionpastel.php">Gestión</a>
-                <span>Tienda</span>
-                <span>ㅤㅤㅤㅤ</span>
-                <a href="./gestionUsu.php">Gestión</a>
-                <span>Usuarios</span>
+                <a href="./gestionpastel.php">Gestión de tienda</a>
+                <a href="./gestionUsu.php">Gestión de usuarios</a>
+                <a href="./gestionPedidos.php">Gestión de Pedidos</a>
                 <?php
             } else {
                 

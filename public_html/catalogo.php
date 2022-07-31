@@ -426,31 +426,43 @@
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="https://www.paypal.com/sdk/js?client-id=AdzEdUHZ41GJGmqaaQEq6W12NepCvy1--2chuk-VyJcP-vlGzWXIzA1j31lEwTBRPtqw3hy7Dscl2IrT&currency=MXN"></script>
         <script>
-                                    paypal.Buttons({
-                                        // Sets up the transaction when a payment button is clicked
-                                        createOrder: (data, actions) => {
-                                            return actions.order.create({
-                                                purchase_units: [{
-                                                        amount: {
-                                                            value: <?php echo $presio; ?>  // Can also reference a variable or function
+                                        paypal.Buttons({
+                                            // Sets up the transaction when a payment button is clicked
+                                            createOrder: (data, actions) => {
+                                                return actions.order.create({
+                                                    purchase_units: [{
+                                                            amount: {
+                                                                value: <?php echo $presio; ?>  // Can also reference a variable or function
+                                                            }
+                                                        }]
+                                                });
+                                            },
+                                            // Finalize the transaction after payer approval
+                                            onApprove: (data, actions) => {
+                                                return actions.order.capture().then(function (orderData) {
+                                                    // Successful capture! For dev/demo purposes:
+                                                    console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
+                                                    const transaction = orderData.purchase_units[0].payments.captures[0];
+                                                    //alert(`Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`);
+                                                    // When ready to go live, remove the alert and show a success message within this page. For example:
+                                                    // const element = document.getElementById('paypal-button-container');
+                                                    // element.innerHTML = '<h3>Thank you for your payment!</h3>';
+                                                    // Or go to another URL:  actions.redirect('thank_you.html');
+                                                    
+                                                    Swal.fire({
+                                                        position: 'center',
+                                                        icon: 'success',
+                                                        title: 'Pagado con éxito!',
+                                                        showConfirmButton: true,
+                                                    }).then((result) => {
+                                                        if (result.isConfirmed) {
+
+                                                            location.href = "./generarPedido.php";
                                                         }
-                                                    }]
-                                            });
-                                        },
-                                        // Finalize the transaction after payer approval
-                                        onApprove: (data, actions) => {
-                                            return actions.order.capture().then(function (orderData) {
-                                                // Successful capture! For dev/demo purposes:
-                                                console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
-                                                const transaction = orderData.purchase_units[0].payments.captures[0];
-                                                alert(`Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`);
-                                                // When ready to go live, remove the alert and show a success message within this page. For example:
-                                                // const element = document.getElementById('paypal-button-container');
-                                                // element.innerHTML = '<h3>Thank you for your payment!</h3>';
-                                                // Or go to another URL:  actions.redirect('thank_you.html');
-                                            });
-                                        }
-                                    }).render('#paypal-button-container');
+                                                    })
+                                                });
+                                            }
+                                        }).render('#paypal-button-container');
         </script>
     </body>
 

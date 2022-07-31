@@ -8,7 +8,7 @@ $query = "DELETE FROM carrito WHERE email_usu='$correoV' ";
  $result = mysqli_query($conn,$query) or die(mysqli_error());
  if($result){
      echo "<script>
-         window.location.href = './catalogo.php';
+         window.history.go(-1);
            </script>";
  }else{
      echo "<script>
@@ -18,7 +18,7 @@ $query = "DELETE FROM carrito WHERE email_usu='$correoV' ";
  }
 } else {
     echo "<script>
-         window.location.href = './catalogo.php';
+        window.history.go(-1);
            </script>";
 }
 

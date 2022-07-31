@@ -7,9 +7,16 @@
         if ($resultado) {
             while ($row = $resultado->fetch_array()) {
                 $presio=$row['resultado'];
-                ?>
+                if($presio != 0){
+                    ?>
                 <span>$<?php echo $presio; ?>.00</span>
                 <?php
+                } else {
+                    ?>
+                <span>$0.00</span>
+                <?php
+                }
+                
             }
         }
     } else {

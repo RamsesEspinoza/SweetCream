@@ -3,6 +3,9 @@
 </header>
 <?php
 session_start();
+
+include './SED.php';
+
 $inc = include("./conexion/conexion.php");
 
 if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
@@ -16,8 +19,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $correo = "";
         $contra = "";
-        $password = $_POST['password'];
+        //  $password = $_POST['password'];
 
+        $password = SED::encryption($_POST["password"]);
+        
+        
+        
         $ema = "SELECT email,password FROM usuarios WHERE email=?";
         $stmt = mysqli_prepare($conn, $ema);
         mysqli_stmt_bind_param($stmt, "s", $_POST['email']);

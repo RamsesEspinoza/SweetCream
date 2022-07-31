@@ -14,3 +14,6 @@ function mostrar() {
         }
     })
 }
+function addcart(){
+    location.href = "./addPersonalizado.php";
+}

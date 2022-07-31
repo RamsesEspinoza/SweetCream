@@ -447,7 +447,7 @@
                                                             <div class="col-md-6 d-flex justify-content-cente">
 
                                                                 <div class="cart_delete">
-                                                                    <a href="./eliminarPastel_1.php" class="btn btn-primary center-block">Vaciar carrito</a>
+                                                                     <a onclick="mostrar()" class="btn btn-primary center-block" style="color: white;">Vaciar carrito</a>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -487,6 +487,7 @@
         <script src="http://code.jquery.com/jquery-latest.js"></script>
         <script src="https://kit.fontawesome.com/bdc40e9dda.js" crossorigin="anonymous"></script>
         <script src="//code.tidio.co/g1tvhizsol7n37h46ewx14mqs1fy14tl.js" async></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="https://www.paypal.com/sdk/js?client-id=AdzEdUHZ41GJGmqaaQEq6W12NepCvy1--2chuk-VyJcP-vlGzWXIzA1j31lEwTBRPtqw3hy7Dscl2IrT&currency=MXN"></script>
         <script>
                                     paypal.Buttons({
@@ -506,11 +507,17 @@
                                                 // Successful capture! For dev/demo purposes:
                                                 console.log('Capture result', orderData, JSON.stringify(orderData, null, 2));
                                                 const transaction = orderData.purchase_units[0].payments.captures[0];
-                                                alert(`Transaction ${transaction.status}: ${transaction.id}\n\nSee console for all available details`);
-                                                // When ready to go live, remove the alert and show a success message within this page. For example:
-                                                // const element = document.getElementById('paypal-button-container');
-                                                // element.innerHTML = '<h3>Thank you for your payment!</h3>';
-                                                // Or go to another URL:  actions.redirect('thank_you.html');
+                                                Swal.fire({
+                                                        position: 'center',
+                                                        icon: 'success',
+                                                        title: 'Pagado con éxito!',
+                                                        showConfirmButton: true,
+                                                    }).then((result) => {
+                                                        if (result.isConfirmed) {
+
+                                                            location.href = "./eliminarPastel_1.php";
+                                                        }
+                                                    })
                                             });
                                         }
                                     }).render('#paypal-button-container');

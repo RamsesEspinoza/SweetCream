@@ -1,19 +1,25 @@
 <?php
-
 $inc = include("./conexion/conexion.php");
 $correo = $_POST['email'];
 $consulta = "SELECT * FROM usuarios WHERE email='$correo'";
 $resultado = mysqli_query($conn, $consulta);
-if($resultado){
-    while ($row = $resultado->fetch_array()) {
-        $pass = $row['password'];
-    }
+
+$consulta = $resultado->fetch_array();
+if (!empty($consulta)) {
     $paracorreo = $correo;
     $titulo = "Recuperación de contraseña";
-    $mensaje = "Tu contraseña es: " .$pass;
+    $mensaje = "Tu contraseña es: " . $consulta['password'];
     $tuccoreo = "From: SweetCream16@outlook.es";
-    
+    echo "<script>
+        alert('El correo electronico fue enviado on exito');
+        window.history.go(-1);
+        </script>";
     mail($paracorreo, $titulo, $mensaje, $tuccoreo);
+}else {
+    echo "<script>
+        alert('El correo electronico no existe');
+        window.history.go(-1);
+        </script>";
 }
 ?>
 

@@ -129,7 +129,7 @@ $inc = include("./conexion/conexion.php");
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-6">
                     <div class="breadcrumb__text">
-                        <h2>Gestion de Pedidos</h2>
+                        <h2>Gestión de Pedidos</h2>
                     </div>
                 </div>
             </div>
@@ -249,7 +249,7 @@ $inc = include("./conexion/conexion.php");
                                 <h6>Horario</h6>
                                 <ul>
                                     <li>Lunes - Viernes: 08:00 am – 08:30 pm</li>
-                                    <li>Sabado: 10:00 am – 16:30 pm</li>
+                                    <li>Sábado: 10:00 am – 16:30 pm</li>
                                     <li>Domingo: 10:00 am – 16:30 pm</li>
                                 </ul>
                             </div>

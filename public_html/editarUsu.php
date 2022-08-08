@@ -134,7 +134,7 @@ $inc = include("./conexion/conexion.php");
                                 <li><a href="./about.php">Acerca de</a></li>
                                 <li class="active"><a href="./catalogo.php">Tienda</a></li>
                                 <li><a href="./blog.php">¡Crea tu propio pastel!</a></li>
-                                <li><a href="./contact.php">Contactanos</a></li>
+                                <li><a href="./contact.php">Contáctanos</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -147,7 +147,7 @@ $inc = include("./conexion/conexion.php");
                 <div class="row">
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="breadcrumb__text">
-                            <h2>Editar partel</h2>
+                            <h2>Editar Usuario</h2>
                         </div>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6">
@@ -235,7 +235,7 @@ $inc = include("./conexion/conexion.php");
                                 <h6>Horario</h6>
                                 <ul>
                                     <li>Lunes - Viernes: 08:00 am – 08:30 pm</li>
-                                    <li>Sabado: 10:00 am – 16:30 pm</li>
+                                    <li>Sábado: 10:00 am – 16:30 pm</li>
                                     <li>Domingo: 10:00 am – 16:30 pm</li>
                                 </ul>
                             </div>

@@ -152,7 +152,7 @@ $inc = include("./conexion/conexion.php");
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6">
                         <div class="breadcrumb__links">
-                            <a href="./catalogo.php">catalogo</a>
+                            <a href="./catalogo.php">catálogo</a>
                             <span>editar</span>
                         </div>
                     </div>

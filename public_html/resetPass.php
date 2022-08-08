@@ -17,8 +17,7 @@
             <div class="h2 text-center" >Recuperar Contraseña</div>
             <div class="h4 text-muted text-center pt-2">Te enviaremos un correo para que puedas restablecer tu contraseña</div>
             
-            <form method="post" class="pt-3" action="enviar.php">
-                <div class="form-group py-2">
+            <form method="post" class="pt-3" action="enviar.php">                <div class="form-group py-2">
                     <div class="input-field"> 
                         <span class="far fa-eye p-2"></span> 
                         <input type="email" name="email" placeholder="Ingresa tu correo electronico">

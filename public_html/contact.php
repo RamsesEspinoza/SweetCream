@@ -104,7 +104,7 @@
                                 <li><a href="./about.php">Acerca de</a></li>
                                 <li><a href="./catalogo.php">Tienda</a></li>
                                 <li><a href="./blog.php">¡Crea tu propio pastel!</a></li>
-                                <li class="active"><a href="./contact.php">Contactanos</a></li>
+                                <li class="active"><a href="./contact.php">Contáctanos</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -156,7 +156,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6 col-sm-6">
                             <div class="contact__address__item">
-                                <h6>Sabado</h6>
+                                <h6>Sábado</h6>
                                 <ul>
                                     <li>
                                         <span class="icon_pin_alt"></span>
@@ -193,11 +193,11 @@
                 <div class="row">
                     <div class="col-lg-4">
                         <div class="contact__text">
-                            <h3>¡Tu opinion es importante!</h3>
+                            <h3>¡Tu opinió  n es importante!</h3>
                             <ul>
                                 <li>El horario de Atención es:</li>
                                 <li>Lunes - Viernes: 08:00 am – 08:30 pm</li>
-                                <li>Sabado: 10:00 am – 16:30 pm</li>
+                                <li>Sábado: 10:00 am – 16:30 pm</li>
                                 <li>Domingo: 10:00 am – 16:30 pm</li>
                             </ul>
                             <img src="img/cake-piece.png" alt="">
@@ -245,7 +245,7 @@
                                 <h6>Horario</h6>
                                 <ul>
                                     <li>Lunes - Viernes: 08:00 am – 08:30 pm</li>
-                                    <li>Sabado: 10:00 am – 16:30 pm</li>
+                                    <li>Sábado: 10:00 am – 16:30 pm</li>
                                     <li>Domingo: 10:00 am – 16:30 pm</li>
                                 </ul>
                             </div>
@@ -304,7 +304,7 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Articulos en carrito</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Artículos en carrito</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>

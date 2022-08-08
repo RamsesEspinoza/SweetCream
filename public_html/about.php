@@ -119,7 +119,7 @@
                                     <li class="active"><a href="./about.php">Acerca de</a></li>
                                     <li><a href="./catalogo.php">Tienda</a></li>
                                     <li><a href="./blog.php">¡Crea tu propio pastel!</a></li>
-                                    <li><a href="./contact.php">Contactanos</a></li>
+                                    <li><a href="./contact.php">Contáctanos</a></li>
                                 </ul>
                             </nav>
                         </div>
@@ -258,7 +258,7 @@
                                 </div>
                                 <div class="blog__item__text">
                                     <h2>Historia</h2>
-                                    <p>Sweet cream tiene sus orígenes en un pueblo llamado Amanalco ubicado en el Estado de México, pueblo donde a través del conocimiento familiar transmitido a uno de sus fundadores la señora Alma Lilia Bravo Basurto en el año 2001 se crea una pequeña repostería que fue ganando impacto en el negocio local por sus productos y buen trato al cliente, lo que desencadeno en un nicho de clientes el cual era cada vez más grande y fiel a la marca en ese entonces aun ausente.</p>
+                                    <p>Sweet Cream tiene sus orígenes en un pueblo llamado Amanalco ubicado en el Estado de México, pueblo donde a través del conocimiento familiar transmitido a uno de sus fundadores la señora Alma Lilia Bravo Basurto en el año 2001 se crea una pequeña repostería que fue ganando impacto en el negocio local por sus productos y buen trato al cliente, lo que desencadeno en un nicho de clientes el cual era cada vez más grande y fiel a la marca en ese entonces aun ausente.</p>
 
                                 </div>
                             </div>
@@ -269,7 +269,7 @@
                                 </div>
                                 <div class="blog__item__text">
                                     <h2>Retorno</h2>
-                                    <p>Sin embargo, por problemas de salud y por lo consiguiente económicos se tuvo que cerrar en el año 2007 la primera repostería, pero esto no paro el entusiasmo y dedicación a nuestros productos es así que en el año 2016 se da origen a un nuevo comercio en la venta de productos de repostería. Ahora con su segundo fundador el señor Carlos Moises Alvarez Bravo con el cual se abre el panorama a nuevos sabores en nuestros productos para generar una diversidad en nuestros productos llamando así la atención de nuevos clientes ahora en la localidad de Zumpango Estado de México generando de nuevo un pequeño pero fiel nicho de clientes el cual destaca nuestra marca no solo por su inigualable sabor sino por la creación de lazos estrechos , generando así momentos inigualables con nuestros productos.  “productos que endulzan más que el paladar, endulzando la vida”</p>
+                                    <p>Sin embargo, por problemas de salud y por lo consiguiente económicos se tuvo que cerrar en el año 2007 la primera repostería, pero esto no paro el entusiasmo y dedicación a nuestros productos es así que en el año 2016 se da origen a un nuevo comercio en la venta de productos de repostería. Ahora con su segundo fundador el señor Carlos Moisés Álvarez Bravo con el cual se abre el panorama a nuevos sabores en nuestros productos para generar una diversidad en nuestros productos llamando así la atención de nuevos clientes ahora en la localidad de Zumpango Estado de México generando de nuevo un pequeño pero fiel nicho de clientes el cual destaca nuestra marca no solo por su inigualable sabor sino por la creación de lazos estrechos , generando así momentos inigualables con nuestros productos.  “productos que endulzan más que el paladar, endulzando la vida”</p>
 
                                 </div>
                             </div>
@@ -337,7 +337,7 @@
                                 <h6>Horario</h6>
                                 <ul>
                                     <li>Lunes - Viernes: 08:00 am – 08:30 pm</li>
-                                    <li>Sabado: 10:00 am – 16:30 pm</li>
+                                    <li>Sábado: 10:00 am – 16:30 pm</li>
                                     <li>Domingo: 10:00 am – 16:30 pm</li>
                                 </ul>
                             </div>
@@ -395,7 +395,7 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Articulos en carrito</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Artículos en carrito</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>

@@ -109,7 +109,7 @@
                                 <li><a href="./about.php">Acerca de</a></li>
                                 <li class="active"><a href="./catalogo.php?pagina=1">Tienda</a></li>
                                 <li><a href="./blog.php">¡Crea tu propio pastel!</a></li>
-                                <li><a href="./contact.php">Contactanos</a></li>
+                                <li><a href="./contact.php">Contáctanos</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -152,7 +152,7 @@
                                     }
                                 </style>
                                 <form>
-                                    <input type="text" placeholder="Search" name="buscador" id="buscador">
+                                    <input type="text" placeholder="Buscar" name="buscador" id="buscador">
                                     <button type="submit"><i class="fa fa-search"></i></button>
                                 </form>
                             </div>
@@ -289,7 +289,7 @@
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Articulos en carrito</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Artículos en carrito</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
@@ -368,7 +368,7 @@
                                 <h6>Horario</h6>
                                 <ul>
                                     <li>Lunes - Viernes: 08:00 am – 08:30 pm</li>
-                                    <li>Sabado: 10:00 am – 16:30 pm</li>
+                                    <li>Sábado: 10:00 am – 16:30 pm</li>
                                     <li>Domingo: 10:00 am – 16:30 pm</li>
                                 </ul>
                             </div>

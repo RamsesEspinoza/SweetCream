@@ -14,7 +14,8 @@ if (!empty($consulta)) {
     $claveE = SED::decryption($consulta['password']);
     $paracorreo = $correo;
     $titulo = "Recuperación de contraseña";
-    $mensaje = "Tu contraseña es: " . $claveE;
+    $mensaje = "Tu contraseña es: .$claveE";
+    
     $tuccoreo = "From: SweetCream16@outlook.es";
     echo "<script>
         Swal.fire({

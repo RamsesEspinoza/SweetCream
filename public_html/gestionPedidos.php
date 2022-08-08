@@ -114,7 +114,7 @@ $inc = include("./conexion/conexion.php");
                                 <li><a href="./about.php">Acerca de</a></li>
                                 <li class="active"><a href="./catalogo.php">Tienda</a></li>
                                 <li><a href="./blog.php">¡Crea tu propio pastel!</a></li>
-                                <li><a href="./contact.php">Contactanos</a></li>
+                                <li><a href="./contact.php">Contáctanos</a></li>
                             </ul>
                         </nav>
                     </div>

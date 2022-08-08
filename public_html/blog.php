@@ -450,7 +450,7 @@
                     <div class="row">
                         <div class="col-lg-7">
                             <p class="copyright__text text-white"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | <a target="_blank">Universidad Tecnológica de Tecámac</a>
+                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Contacto <a target="_blank">Devloop@gmail.com</a>
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                             </p>
                         </div>
@@ -507,6 +507,11 @@
                                     </table>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label style="border-collapse: collapse; width: 100%;text-align:center">¡Contáctanos para pedidos especiales!</label>
+                                </div>
+                            </div>
                         </div>
                         <div class="modal-footer">
 
@@ -519,11 +524,9 @@
                                                     <div class="col-md-12">
                                                         <div class="row">
                                                             <div class="col-md-6 d-flex justify-content-center">
-
                                                                 <button type="button" class="btn btn-secondary center-block" data-dismiss="modal">Cerrar</button>
                                                             </div>
                                                             <div class="col-md-6 d-flex justify-content-cente">
-
                                                                 <div class="cart_delete">
                                                                     <a onclick="mostrar()" class="btn btn-primary center-block" style="color: white;">Vaciar carrito</a>
                                                                 </div>
@@ -549,6 +552,7 @@
                 </div>
             </div>
         </div>
+
         <!-- Js Plugins -->
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>

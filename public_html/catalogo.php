@@ -160,7 +160,15 @@
                     </div>
                 </div>
                 <div class="row">
+                    <script>
 
+                        function descripcion(desc) {
+                            Swal.fire({
+                                title: 'DESCRIPCIÓN',
+                                text: desc
+                            })
+                        }
+                    </script>
                     <?php
                     $inc = include("./conexion/conexion.php");
                     if (!$_GET) {
@@ -200,24 +208,25 @@
                                 $id = $row['pastel_id'];
                                 $nombre = $row['nombre'];
                                 $precio = $row['precio'];
+                                $desc = $row['descripcion'];
                                 ?>
 
                                 <div class="col-lg-3 col-md-6 col-sm-6 buscar">
                                     <div class="product__item">
-                                        <div class="product__item__pic set-bg" data-setbg="<?php echo $row['img_pastel']; ?>">
-                                            <div class="product__label">
+                                        <div class="product__item__pic set-bg" onclick="descripcion('<?php echo $row['descripcion']; ?>')" data-setbg="<?php echo $row['img_pastel']; ?> " title="Presione para ver detalles">
+                                            <div class="product__label" onclick="descripcion('<?php echo $row['descripcion']; ?>')">
                                                 <span>SweetCream</span>
                                             </div>
                                         </div>
                                         <div class="product__item__text">
-                                            <h6><a href="#"><?php echo $nombre; ?></a></h6>
-                                            <div class="product__item__price">$<?php echo $precio; ?>.00</div>
+                                            <h6 onclick="descripcion('<?php echo $row['descripcion']; ?>')"><a href="#"><?php echo $nombre; ?></a></h6>
+                                            <div class="product__item__price" onclick="descripcion('<?php echo $row['descripcion']; ?>')">$<?php echo $precio; ?>.00</div>
                                             <form action="./functions.php" method="POST">
                                                 <input type="text" class="form-control" id="idnombre" name="txtnombre" value="<?php echo $row["nombre"]; ?>" hidden="">
                                                 <input type="text" class="form-control" id="idnombre" name="txtprecio" value="<?php echo $row["precio"]; ?>" hidden="">
                                                 <div class="cart_add">
                                                     <div class="product__item__text">
-                                                        <div class="product__item__price">ㅤㅤㅤㅤㅤ</div>
+                                                        <div class="product__item__price" onclick="descripcion('<?php echo $row['descripcion']; ?>')">ㅤㅤㅤㅤㅤ</div>
                                                         <div class="cart_add">
                                                             <style>
                                                                 .botonMenu {
@@ -235,6 +244,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <?php
                             }
                         }
@@ -266,7 +276,7 @@
                         </div>
                         <div class="col-lg-6 col-md-6 col-sm-6">
                             <div class="shop__last__text">
-                                <p>Mostrando 8 elementos de <?php echo $aja2; ?> </p>
+                                <p><?php echo $aja2; ?> elementos encontrados</p>
                             </div>
                         </div>
                     </div>
@@ -274,7 +284,6 @@
             </div>
         </section>
         <!-- Shop Section End -->
-
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
@@ -304,6 +313,11 @@
                                     </table>
                                 </div>
                             </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label style="border-collapse: collapse; width: 100%;text-align:center">¡Contáctanos para pedidos especiales!</label>
+                                </div>
+                            </div>
                         </div>
                         <div class="modal-footer">
 
@@ -316,11 +330,9 @@
                                                     <div class="col-md-12">
                                                         <div class="row">
                                                             <div class="col-md-6 d-flex justify-content-center">
-
                                                                 <button type="button" class="btn btn-secondary center-block" data-dismiss="modal">Cerrar</button>
                                                             </div>
                                                             <div class="col-md-6 d-flex justify-content-cente">
-
                                                                 <div class="cart_delete">
                                                                     <a onclick="mostrar()" class="btn btn-primary center-block" style="color: white;">Vaciar carrito</a>
                                                                 </div>

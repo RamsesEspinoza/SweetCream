@@ -175,64 +175,66 @@
             <!-- Hero Section End -->
 
             <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Articulos en carrito</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Articulos en carrito</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Tabla de agregar al carrito -->
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Producto</th>
+                                                <th>Precio</th>
+                                                <th>Cantidad</th>
+                                            </tr>
+                                            <?php
+                                            include ("./mostrarCart.php");
+                                            ?>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label style="border-collapse: collapse; width: 100%;text-align:center">¡Contáctanos para pedidos especiales!</label>
+                                </div>
+                            </div>
                         </div>
-                        <div class="modal-body">
-                            <!-- Tabla de agregar al carrito -->
+                        <div class="modal-footer">
+
                             <div class="container-fluid">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <table class="table">
-                                            <thead>
-                                                <tr>
-                                                    <th>Producto</th>
-                                                    <th>Precio</th>
-                                                    <th>Cantidad</th>
-                                                </tr>
-                                                <?php
-                                                include ("./mostrarCart.php");
-                                                ?>
-                                            </thead>
-                                        </table>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer">
-
-                                <div class="container-fluid">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="row">
-                                                <div class="col-md-12">
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <div class="row">
-                                                                <div class="col-md-6 d-flex justify-content-center">
-
-                                                                    <button type="button" class="btn btn-secondary center-block" data-dismiss="modal">Cerrar</button>
-                                                                </div>
-                                                                <div class="col-md-6 d-flex justify-content-cente">
-
-                                                                    <div class="cart_delete">
-                                                                        <a onclick="mostrar()" class="btn btn-primary center-block" style="color: white;">Vaciar carrito</a>
-                                                                    </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="row">
+                                                            <div class="col-md-6 d-flex justify-content-center">
+                                                                <button type="button" class="btn btn-secondary center-block" data-dismiss="modal">Cerrar</button>
+                                                            </div>
+                                                            <div class="col-md-6 d-flex justify-content-cente">
+                                                                <div class="cart_delete">
+                                                                    <a onclick="mostrar()" class="btn btn-primary center-block" style="color: white;">Vaciar carrito</a>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="row">
-                                                        <div class="col-md-12">
-                                                            <br><br><br>
-                                                            <div> 
-                                                                <div id="paypal-button-container"></div>
-                                                            </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <br><br><br>
+                                                        <div> 
+                                                            <div id="paypal-button-container"></div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -241,13 +243,12 @@
                                     </div>
                                 </div>
                             </div>
-
-
-
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+
 
             <!-- Testimonial Section Begin -->
             <section class="testimonial spad">
@@ -382,7 +383,7 @@
                         <div class="row">
                             <div class="col-lg-7">
                                 <p class="copyright__text text-white"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | <a target="_blank">Universidad Tecnológica de Tecámac</a>
+                                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Contacto <a target="_blank">Devloop@gmail.com</a>
 
                                 </p>
                             </div>

@@ -17,7 +17,7 @@ if (isset($_SESSION["email"])) {
         }
     }
 } else {
-    echo 'Iniciar Sesion';
+    echo 'Iniciar Sesión';
 }
 if ($inc) {
     

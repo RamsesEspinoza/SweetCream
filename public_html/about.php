@@ -329,65 +329,56 @@
 
         </section>
         <!-- Footer Section Begin -->
-        <footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="footer__widget">
-                            <h6>Horario</h6>
-                            <ul>
-                                <li>Lunes - Viernes: 08:00 am – 08:30 pm</li>
-                                <li>Sabado: 10:00 am – 16:30 pm</li>
-                                <li>Domingo: 10:00 am – 16:30 pm</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="footer__about">
-                            <div class="footer__logo">
-                                <a href="#"><img src="img/footer-logo.png" alt=""></a>
-                            </div>
-
-                            <div class="footer__social">
-                                <a href="https://www.facebook.com/Sweet-Cream-109388668488078"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-twitter"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-youtube-play"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="footer__newslatter">
-                            <h6>Entérate de nuestras Promociones</h6>
-                            <p>Recibe promociones exclusivas y noticias sobre lanzamientos de nuevos productos</p>
-                            <form action="#">
-                                <input type="text" placeholder="Correo Electronico">
-                                <button type="submit"><i class="fa fa-send-o"></i></button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="copyright">
+         <footer class="footer set-bg" data-setbg="img/footer-bg.jpg">
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-7">
-                            <p class="copyright__text text-white"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | <a target="_blank">Universidad Tecnológica de Tecámac</a>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            </p>
-                        </div>
-                        <div class="col-lg-5">
-                            <div class="copyright__widget">
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="footer__widget">
+                                <h6>Horario</h6>
                                 <ul>
-                                        
+                                    <li>Lunes - Viernes: 08:00 am – 08:30 pm</li>
+                                    <li>Sabado: 10:00 am – 16:30 pm</li>
+                                    <li>Domingo: 10:00 am – 16:30 pm</li>
                                 </ul>
                             </div>
                         </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6">
+                            <div class="footer__about">
+                                <div class="footer__logo">
+                                    <a href="#"><img src="img/footer-logo.png" alt=""></a>
+                                </div>
+
+                                <div class="footer__social">
+                                    <a href="https://www.facebook.com/Sweet-Cream-109388668488078"><i class="fa fa-facebook"></i></a>
+                                    <a href="#"><i class="fa fa-twitter"></i></a>
+                                    <a href="#"><i class="fa fa-instagram"></i></a>
+                                    <a href="#"><i class="fa fa-youtube-play"></i></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </footer>
+                <div class="copyright">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-7">
+                                <p class="copyright__text text-white"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos los derechos reservados | Contacto <a target="_blank">Devloop@gmail.com</a>
+
+                                </p>
+                            </div>
+                            <div class="col-lg-5">
+                                <div class="copyright__widget">
+                                    <ul>
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         <!-- Footer Section End -->
         <!-- Search Begin -->
         <div class="search-model">
@@ -400,37 +391,41 @@
         </div>
         <!-- Search End -->
 <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Articulos en carrito</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <!-- Tabla de agregar al carrito -->
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>Producto</th>
-                                            <th>Precio</th>
-                                            <th>Cantidad</th>
-                                        </tr>
-                                        <?php
-                                        include ("./mostrarCart.php");
-                                        ?>
-                                    </thead>
-                                </table>
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Articulos en carrito</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Tabla de agregar al carrito -->
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Producto</th>
+                                                <th>Precio</th>
+                                                <th>Cantidad</th>
+                                            </tr>
+                                            <?php
+                                            include ("./mostrarCart.php");
+                                            ?>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label style="border-collapse: collapse; width: 100%;text-align:center">¡Contáctanos para pedidos especiales!</label>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    
-              <div class="modal-footer">
+                        <div class="modal-footer">
 
                             <div class="container-fluid">
                                 <div class="row">
@@ -441,13 +436,11 @@
                                                     <div class="col-md-12">
                                                         <div class="row">
                                                             <div class="col-md-6 d-flex justify-content-center">
-
                                                                 <button type="button" class="btn btn-secondary center-block" data-dismiss="modal">Cerrar</button>
                                                             </div>
                                                             <div class="col-md-6 d-flex justify-content-cente">
-
                                                                 <div class="cart_delete">
-                                                                     <a onclick="mostrar()" class="btn btn-primary center-block" style="color: white;">Vaciar carrito</a>
+                                                                    <a onclick="mostrar()" class="btn btn-primary center-block" style="color: white;">Vaciar carrito</a>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -467,11 +460,11 @@
                                 </div>
                             </div>
                         </div>
-
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+
         <!-- Js Plugins -->
         <script src="js/jquery-3.3.1.min.js"></script>
         <script src="js/bootstrap.min.js"></script>

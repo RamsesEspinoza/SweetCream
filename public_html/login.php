@@ -147,10 +147,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </label> -->
                     </div>
                 </div> 
-                <div class="text-center pt-3 text-muted"><a href="resetPass.php" id="forgot">Olvidaste tu contraseña?</a></div>
-                <button class="btn btn-block text-center my-3" type="submit" value="Ingresar">Iniciar Sesion</button>
-                <div class="text-center pt-3 text-muted">No tienes Cuenta? <a href="signup.php">Registrate</a></div>
-                <div class="text-center pt-3 text-muted"><span><a href="index.php">Revisar sin Iniciar Sesion</a></span></div>
+                <div class="text-center pt-3 text-muted"><a href="resetPass.php" id="forgot">¿Olvidaste tu contraseña?</a></div>
+                <button class="btn btn-block text-center my-3" type="submit" value="Ingresar">Iniciar Sesión</button>
+                <div class="text-center pt-3 text-muted">¿No tienes cuenta? <a href="signup.php">Regístrate</a></div>
+                <div class="text-center pt-3 text-muted"><span><a href="index.php">Revisar sin Iniciar Sesión</a></span></div>
             </form>
         </div>
         <script type='text/javascript'></script>

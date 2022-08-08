@@ -4,12 +4,11 @@
 <?php
 include './SED.php';
 $inc = include("./conexion/conexion.php");
-$claveE = SED::encryption($_POST["password"]);
 
 try {
     if (!empty($_POST['email']) && !empty($_POST['password'])) {
         if ($_POST["password"] == $_POST["confirm_password"]) {
-
+            $claveE = SED::encryption($_POST["password"]);
             $sql = "INSERT INTO usuarios (email, password,nombre) VALUES (?, ?, ?)";
             $stmt = mysqli_prepare($conn, $sql);
             //$password = password_hash($_POST['password'], PASSWORD_DEFAULT);
@@ -36,7 +35,7 @@ try {
          
          </script>";
         }
-    } 
+    }
 } catch (Exception $ex) {
     echo "<script>
          alert('Algo salio mal :/');
@@ -59,7 +58,7 @@ try {
         <script type='text/javascript' src='https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js'></script>
         <link rel="stylesheet" href="css/EstiloLogin.css"/>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-        
+
     </head>
     <body oncontextmenu='return false' class='snippet-body'>
         <div class="wrapper bg-white">
@@ -112,7 +111,7 @@ try {
                 </div>
 
                 <button class="btn btn-block text-center my-3" type="submit" value="Registrarme">Registrarme</button>
-                <div class="text-center pt-3 text-muted"><span> O <br><a href="login.php">Inicia Sesion</a></span></div>
+                <div class="text-center pt-3 text-muted"><span> O <br><a href="login.php">Iniciar Sesión</a></span></div>
 
 
             </form>
@@ -122,14 +121,22 @@ try {
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Politicas de Privacidad</h5>
+                            <h5 class="modal-title" id="exampleModalLongTitle">Políticas de Privacidad</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <div class="grid">
                             <div class="grid__item large--four-fifths push--large--one-tenth">
-                                <div class="rte rte--nomargin rte--indented-images">
+                                <style>
+                                    p {
+                                        border: 10px;
+                                        margin: 30px;
+                                        line-height : 30px;
+                                        text-align: justify
+                                    }
+                                </style>
+                                <div class="rte rte--nomargin rte--indented-images p">
                                     <p><strong>Aviso de Privacidad</strong></p>
                                     <p><span style="font-weight: 400;">EL AVISO DE PRIVACIDAD FORMA PARTE DEL USO DEL SITIO WEB WWW.SWEETCREAM.COM</span></p>
                                     <p><strong>RESPONSABLE</strong></p>
@@ -177,7 +184,7 @@ try {
                 <div class="modal-dialog modal-lg">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Terminos y Condiciones</h5>
+                            <h5 class="modal-title" id="exampleModalLongTitle">Términos y Condiciones</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -269,7 +276,7 @@ try {
     <link rel="stylesheet" href="css/sesion_style.css" type="text/css">
     
 <?php if (!empty($message)): ?>
-                                                      <p> <?= $message ?></p>
+                                                          <p> <?= $message ?></p>
 <?php endif; ?>
     
     <h1>Registrate</h1>
